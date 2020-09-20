@@ -13,77 +13,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c6441d9c-13b7-4a81-9d5f-5adeda0ad1bb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.DB KP/.idea/contentModel.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.DB KP/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.DB KP/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.DB KP/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.DB KP/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.DB KP/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.DB KP/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB KP.sln" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB KP/Controllers/AuthenticationController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB KP/Controllers/HomeController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB KP/DB KP.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB KP/Models/ApplicationContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB KP/Models/ErrorViewModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB KP/Models/UserModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB KP/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB KP/Properties/launchSettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB KP/Startup.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB KP/Views/Authentication/Loginin.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB KP/Views/Authentication/Register.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB KP/Views/Authentication/Register.cshtml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB KP/Views/Authentication/SuccessRegister.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB KP/Views/Authentication/SuccessRegister.cshtml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB KP/Views/Home/BlackJack.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB KP/Views/Home/Index.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB KP/Views/Home/Leaderboard.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB KP/Views/Shared/Error.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB KP/Views/Shared/_Layout.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB KP/Views/Shared/_ValidationScriptsPartial.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB KP/Views/_ViewImports.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB KP/Views/_ViewStart.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB KP/appsettings.Development.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB KP/appsettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB KP/wwwroot/css/site.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB KP/wwwroot/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB KP/wwwroot/js/site.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB KP/wwwroot/lib/bootstrap/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB KP/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB KP/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB KP/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB KP/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB KP/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB KP/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB KP/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB KP/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB KP/wwwroot/lib/bootstrap/dist/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB KP/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB KP/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB KP/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB KP/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB KP/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB KP/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB KP/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB KP/wwwroot/lib/bootstrap/dist/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB KP/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB KP/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB KP/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB KP/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB KP/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB KP/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB KP/wwwroot/lib/jquery-validation/LICENSE.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB KP/wwwroot/lib/jquery-validation/dist/additional-methods.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB KP/wwwroot/lib/jquery-validation/dist/additional-methods.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB KP/wwwroot/lib/jquery-validation/dist/jquery.validate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB KP/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB KP/wwwroot/lib/jquery/LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB KP/wwwroot/lib/jquery/dist/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB KP/wwwroot/lib/jquery/dist/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB KP/wwwroot/lib/jquery/dist/jquery.min.map" afterDir="false" />
-    </list>
+    <list default="true" id="c6441d9c-13b7-4a81-9d5f-5adeda0ad1bb" name="Default Changelist" comment="Register feature" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -196,8 +126,16 @@
       <workItem from="1600168495393" duration="100000" />
       <workItem from="1600451968166" duration="4769000" />
       <workItem from="1600510491820" duration="10378000" />
-      <workItem from="1600536168701" duration="7685000" />
+      <workItem from="1600536168701" duration="9011000" />
     </task>
+    <task id="LOCAL-00001" summary="Register feature">
+      <created>1600591224271</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1600591224271</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -220,32 +158,42 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Register feature" />
+    <option name="LAST_COMMIT_MESSAGE" value="Register feature" />
   </component>
   <component name="WindowStateProjectService">
     <state x="278" y="59" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599892153514">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="278" y="59" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1366.741@0.27.1366.741" timestamp="1599892153514" />
-    <state width="1320" height="172" key="GridCell.Tab.0.bottom" timestamp="1600590655373">
+    <state x="546" y="297" width="273" height="207" key="Github.ShareDialog" timestamp="1600591282793">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="172" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1600590655373" />
-    <state width="1320" height="172" key="GridCell.Tab.0.center" timestamp="1600590655372">
+    <state x="546" y="297" width="273" height="207" key="Github.ShareDialog/0.27.1366.741@0.27.1366.741" timestamp="1600591282793" />
+    <state width="1320" height="172" key="GridCell.Tab.0.bottom" timestamp="1600597693365">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="172" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1600590655372" />
-    <state width="1320" height="172" key="GridCell.Tab.0.left" timestamp="1600590655371">
+    <state width="1320" height="172" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1600597693365" />
+    <state width="1320" height="172" key="GridCell.Tab.0.center" timestamp="1600597693364">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="172" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1600590655371" />
-    <state width="1320" height="172" key="GridCell.Tab.0.right" timestamp="1600590655373">
+    <state width="1320" height="172" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1600597693364" />
+    <state width="1320" height="172" key="GridCell.Tab.0.left" timestamp="1600597693362">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="172" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1600590655373" />
+    <state width="1320" height="172" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1600597693362" />
+    <state width="1320" height="172" key="GridCell.Tab.0.right" timestamp="1600597693364">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state width="1320" height="172" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1600597693364" />
     <state x="325" y="41" width="705" height="719" key="RiderGenerateDialog" timestamp="1600513124629">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="325" y="41" width="705" height="719" key="RiderGenerateDialog/0.27.1366.741@0.27.1366.741" timestamp="1600513124629" />
+    <state x="278" y="119" width="800" height="564" key="Vcs.Push.Dialog.v2" timestamp="1600598463159">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="278" y="119" width="800" height="564" key="Vcs.Push.Dialog.v2/0.27.1366.741@0.27.1366.741" timestamp="1600598463159" />
     <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1600497466288">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
