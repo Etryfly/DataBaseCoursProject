@@ -1,7 +1,14 @@
+using System;
+using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
+using System.Linq;
+using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using DB_KP.Models;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -30,9 +37,30 @@ namespace DB_KP.Controllers
         
         [HttpPost]
         [AllowAnonymous]
-        public IActionResult Loginin(UserModel user)
+        public async Task<IActionResult> Loginin(UserModel user)
         {
-            return View();
+            string passwordHash = getHash( user.Login + user.Password);
+            var userFromDb = db.Users.FirstOrDefault(u => u.Login == user.Login && u.Password == passwordHash);
+            if (userFromDb != null)
+            {
+                var claims = new List<Claim>
+                {
+                    new Claim(ClaimsIdentity.DefaultNameClaimType, user.Login)
+                };
+                // создаем объект ClaimsIdentity
+                ClaimsIdentity id = new ClaimsIdentity(claims, "ApplicationCookie",
+                    ClaimsIdentity.DefaultNameClaimType, ClaimsIdentity.DefaultRoleClaimType);
+                // установка аутентификационных куки
+                await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, 
+                    new ClaimsPrincipal(id));
+                    
+                return RedirectToAction("Index", "Home");
+
+            }
+            ModelState.AddModelError("Login", "Invalid login or password");
+            return View(user);
+
+
         }
 
         [HttpGet]
@@ -64,23 +92,46 @@ namespace DB_KP.Controllers
 
             return sb.ToString();
         }
+        
+        public async Task<IActionResult> Logout()
+        {
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            return RedirectToAction("Index", "Home");//TODO доделать 
+        }
 
         [HttpPost]
         [AllowAnonymous]
         public IActionResult Register(UserModel model, string returnUrl)
         {
-           
+            if (db.Users.FirstOrDefault(u => u.Login == model.Login)!=null)
+            {
+                ModelState.AddModelError("Login", "Login already claimed");
+                return View(model);
+                
+            }
+
             string salt = model.Login;
             
             UserModel user = new UserModel();
+            MoneyModel money = new MoneyModel();
+            money.Chips = 100;
+            user.Money = money;
+            user.GameStats = new GameStatsModel(){chips_earned = 0, Loses = 0, Wins = 0};
+            
             user.Login = model.Login;
             
             user.Password = getHash(salt + model.Password);
             _logger.LogInformation("Auth controller - Register method. Login: " + user.Login + " Password hash: " +
                                    user.Password);
-
-            db.Add(user);
+        
+            db.Add(money);
             db.SaveChanges();
+            user.GameStats.Id =  money.Id;
+            db.Add(user.GameStats);
+            db.Add(user);
+                
+            db.SaveChanges();
+            
             TempData["login"] = user.Login;
             return RedirectToAction("SuccessRegister");
         }
@@ -89,5 +140,7 @@ namespace DB_KP.Controllers
         {
             return View();
         }
+        
+        
     }
 }

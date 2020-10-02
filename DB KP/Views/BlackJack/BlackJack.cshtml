@@ -1,0 +1,31 @@
+﻿@using System.Security.Claims
+@model UserModel
+
+@{
+    Layout = "_Layout";
+}
+
+@* bet 
+ generate 4 cards
+ 2 buttons: hit and stand
+ hit: add 1 more card to player
+ stand: open player and computer cards and compute result
+
+*@
+
+<h2 class="text-center">@ViewData["Title"]</h2>
+<div class="user-info">
+    <p>Login: @User.Identity.Name</p>
+    Your chips: <p id="user-chips">@Model.Money.Chips</p>
+
+</div>
+<div class="game-interface">
+       <input type="number" id="betCount">
+        <p>Bet value </p> 
+        <button id="sendButton" onclick="send()">Bet</button>
+       
+   
+</div>
+
+
+

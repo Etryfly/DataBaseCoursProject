@@ -8,12 +8,18 @@
       <e p="DB KP" t="IncludeRecursive">
         <e p="Controllers" t="Include">
           <e p="AuthenticationController.cs" t="Include" />
+          <e p="BlackJackController.cs" t="Include" />
           <e p="HomeController.cs" t="Include" />
         </e>
         <e p="DB KP.csproj" t="IncludeRecursive" />
+        <e p="DBLog.txt" t="Include" />
+        <e p="DBLoggerProvider.cs" t="Include" />
         <e p="Models" t="Include">
+          <e p="AchievementsModel.cs" t="Include" />
           <e p="ApplicationContext.cs" t="Include" />
           <e p="ErrorViewModel.cs" t="Include" />
+          <e p="GameStatsModel.cs" t="Include" />
+          <e p="MoneyModel.cs" t="Include" />
           <e p="UserModel.cs" t="Include" />
         </e>
         <e p="Pages" t="Include" />
@@ -30,8 +36,10 @@
             <e p="SuccessRegister.cshtml" t="Include" />
             <e p="SuccessRegister.cshtml.cs" t="Include" />
           </e>
-          <e p="Home" t="Include">
+          <e p="BlackJack" t="Include">
             <e p="BlackJack.cshtml" t="Include" />
+          </e>
+          <e p="Home" t="Include">
             <e p="Index.cshtml" t="Include" />
             <e p="Leaderboard.cshtml" t="Include" />
           </e>

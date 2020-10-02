@@ -82,3 +82,8 @@ body {
 .register-success {
   margin: auto;
 }
+
+.user-info {
+  margin-left:80%;
+  color:darkslategray;
+}
