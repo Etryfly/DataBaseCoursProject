@@ -11,7 +11,11 @@ namespace DB_KP.Models
         public DbSet<MoneyModel> Money { get; set; }
         public DbSet<GameStatsModel> GameStats { get; set; }
         public DbSet<AchievementsModel> Achievement { get; set; }
-        
+        public DbSet<BetsModel> Bets { get; set; }
+        public DbSet<CardModel> Card { get; set; }
+        public DbSet<HandModel> Hand { get; set; }
+        public DbSet<HandCardModel> HandCard { get; set; }
+                
         public ApplicationContext(DbContextOptions<ApplicationContext> options) : base(options)
         {
             Database.EnsureCreated();

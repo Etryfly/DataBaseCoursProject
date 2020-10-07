@@ -17,8 +17,14 @@
         <e p="Models" t="Include">
           <e p="AchievementsModel.cs" t="Include" />
           <e p="ApplicationContext.cs" t="Include" />
+          <e p="Cards" t="Include">
+            <e p="BetsModel.cs" t="Include" />
+            <e p="CardModel.cs" t="Include" />
+            <e p="HandCardModel.cs" t="Include" />
+          </e>
           <e p="ErrorViewModel.cs" t="Include" />
           <e p="GameStatsModel.cs" t="Include" />
+          <e p="HandModel.cs" t="Include" />
           <e p="MoneyModel.cs" t="Include" />
           <e p="UserModel.cs" t="Include" />
         </e>

@@ -39,15 +39,6 @@ namespace DB_KP.Controllers
             return View(await db.Users.ToListAsync());
         }
 
-        // [HttpPost] //TODO fix this
-        // public async Task<IActionResult> Create(UserModel user)
-        // {
-        //     
-        //     
-        //     db.Users.Add(user);
-        //     await db.SaveChangesAsync();
-        //     return RedirectToAction("Leaderboard");
-        // }
        
         
     }

@@ -29,26 +29,18 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c6441d9c-13b7-4a81-9d5f-5adeda0ad1bb" name="Default Changelist" comment="Register feature">
-      <change afterPath="$PROJECT_DIR$/DB KP/Controllers/BlackJackController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB KP/DBLog.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB KP/DBLoggerProvider.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB KP/Models/AchievementsModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB KP/Models/GameStatsModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DB KP/Models/MoneyModel.cs" afterDir="false" />
+    <list default="true" id="c6441d9c-13b7-4a81-9d5f-5adeda0ad1bb" name="Default Changelist" comment="bet feature">
+      <change afterPath="$PROJECT_DIR$/DB KP/Models/Cards/BetsModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DB KP/Models/Cards/CardModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DB KP/Models/Cards/HandCardModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DB KP/Models/HandModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DB KP/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DB KP/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DB KP/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DB KP/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB KP/Controllers/AuthenticationController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DB KP/Controllers/AuthenticationController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/Controllers/BlackJackController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DB KP/Controllers/BlackJackController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DB KP/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DB KP/Controllers/HomeController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB KP/DB KP.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/DB KP/DB KP.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/DBLog.txt" beforeDir="false" afterPath="$PROJECT_DIR$/DB KP/DBLog.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DB KP/Models/ApplicationContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DB KP/Models/ApplicationContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB KP/Models/UserModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DB KP/Models/UserModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB KP/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DB KP/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB KP/Views/Authentication/Loginin.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/DB KP/Views/Authentication/Loginin.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB KP/Views/Authentication/Register.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/DB KP/Views/Authentication/Register.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB KP/Views/Home/BlackJack.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/DB KP/Views/BlackJack/BlackJack.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB KP/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/DB KP/Views/Shared/_Layout.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB KP/wwwroot/css/site.css" beforeDir="false" afterPath="$PROJECT_DIR$/DB KP/wwwroot/css/site.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/Views/BlackJack/BlackJack.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/DB KP/Views/BlackJack/BlackJack.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DB KP/wwwroot/js/site.js" beforeDir="false" afterPath="$PROJECT_DIR$/DB KP/wwwroot/js/site.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,25 +48,34 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/C072ADA3-420F-4E08-8493-043C3240EB59/24/ControllerBase.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/DB6C1EE3-E8FA-4976-B69E-4AEE82E30549/C/Controller.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/0771D12B-FDF2-42E4-B368-D141AF7A39CD/B/HashAlgorithm.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/0ED64369-B9E5-46BD-901E-20FAF89A4945/3/AuthorizationMiddleware.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/C072ADA3-420F-4E08-8493-043C3240EB59/F3/ActionMethodExecutor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/A23E70F6-03E3-4C94-80B8-7ACD180A736C/13/DeveloperExceptionPageExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/EC3D5B60-D3AF-4B3E-97DB-FB39159D1EAF/a3/08c1a16f/Activity.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/85765ECD-B9AF-4A4F-9C9D-3D144D86F331/8/Queryable.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/91D93D46-6E16-4647-8E65-06A81FCFBF84/6/AuthenticationMiddleware.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/A23E70F6-03E3-4C94-80B8-7ACD180A736C/4/DeveloperExceptionPageMiddleware.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/DB6C1EE3-E8FA-4976-B69E-4AEE82E30549/1B/ViewResult.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/2E939E8C-234E-40D8-9B8A-366812B06A56/86/HttpProtocol.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/DB6C1EE3-E8FA-4976-B69E-4AEE82E30549/C/Controller.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/0771D12B-FDF2-42E4-B368-D141AF7A39CD/B/HashAlgorithm.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/C072ADA3-420F-4E08-8493-043C3240EB59/F3/ActionMethodExecutor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/85765ECD-B9AF-4A4F-9C9D-3D144D86F331/8/Queryable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/156090DF-4A5F-4E65-86B7-A215C990284E/C/DbContext.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/DB KP/Views/Home/Master.cshtml" />
         <option value="$PROJECT_DIR$/DB KP/Models/LeaderboardModel.cs" />
         <option value="$PROJECT_DIR$/DB KP/Views/Home/Index.cshtml" />
         <option value="$PROJECT_DIR$/DB KP/appsettings.json" />
@@ -95,14 +96,11 @@
         <option value="$PROJECT_DIR$/DB KP/Models/UserMoneyModel.cs" />
         <option value="$PROJECT_DIR$/DB KP/Views/Authentication/SuccessRegister.cshtml" />
         <option value="$PROJECT_DIR$/DB KP/Models/UserInfoModel.cs" />
-        <option value="$PROJECT_DIR$/DB KP/Controllers/HomeController.cs" />
         <option value="$PROJECT_DIR$/DB KP/Models/AchievesModel.cs" />
         <option value="$PROJECT_DIR$/DB KP/Models/AchievementModel.cs" />
         <option value="$PROJECT_DIR$/DB KP/Models/AchievementsModel.cs" />
-        <option value="$PROJECT_DIR$/DB KP/Models/UserModel.cs" />
         <option value="$PROJECT_DIR$/DB KP/Models/GameStatsModel.cs" />
         <option value="$PROJECT_DIR$/DB KP/DBLog.txt" />
-        <option value="$PROJECT_DIR$/DB KP/Models/ApplicationContext.cs" />
         <option value="$PROJECT_DIR$/DB KP/Models/MoneyModel.cs" />
         <option value="$PROJECT_DIR$/DB KP/wwwroot/css/site.css" />
         <option value="$PROJECT_DIR$/DB KP/DBLoggerProvider.cs" />
@@ -110,10 +108,25 @@
         <option value="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" />
         <option value="$PROJECT_DIR$/DB KP/Views/Authentication/Register.cshtml" />
         <option value="$PROJECT_DIR$/DB KP/Controllers/AuthenticationController.cs" />
+        <option value="$PROJECT_DIR$/DB KP/Controllers/HomeController.cs" />
+        <option value="$PROJECT_DIR$/DB KP/Card.cs" />
+        <option value="$PROJECT_DIR$/DB KP/Models/Bet.cs" />
+        <option value="$PROJECT_DIR$/DB KP/Models/BetsModel.cs" />
+        <option value="$PROJECT_DIR$/DB KP/Models/UserModel.cs" />
+        <option value="$PROJECT_DIR$/DB KP/Models/CardModel.cs" />
+        <option value="$PROJECT_DIR$/DB KP/Models/HandCardModel.cs" />
+        <option value="$PROJECT_DIR$/DB KP/Models/CardsDbContext.cs" />
         <option value="$PROJECT_DIR$/DB KP/Startup.cs" />
+        <option value="$PROJECT_DIR$/DB KP/Models/Cards/HandModel.cs" />
+        <option value="$PROJECT_DIR$/DB KP/Models/HandModel.cs" />
+        <option value="$PROJECT_DIR$/DB KP/Models/ApplicationContext.cs" />
+        <option value="$PROJECT_DIR$/DB KP/Models/Cards/CardModel.cs" />
+        <option value="$PROJECT_DIR$/DB KP/Models/Cards/HandCardModel.cs" />
+        <option value="$PROJECT_DIR$/DB KP/Models/Cards/BetsModel.cs" />
+        <option value="$PROJECT_DIR$/DB KP/wwwroot/gameDeck.html" />
         <option value="$PROJECT_DIR$/DB KP/Controllers/BlackJackController.cs" />
-        <option value="$PROJECT_DIR$/DB KP/wwwroot/js/site.js" />
         <option value="$PROJECT_DIR$/DB KP/Views/BlackJack/BlackJack.cshtml" />
+        <option value="$PROJECT_DIR$/DB KP/wwwroot/js/site.js" />
       </list>
     </option>
   </component>
@@ -131,6 +144,7 @@
     <property name="DatabaseDriversLRU" value="sqlserver" />
     <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34988362" />
     <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.30023274" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -187,7 +201,8 @@
       <workItem from="1600451968166" duration="4769000" />
       <workItem from="1600510491820" duration="10378000" />
       <workItem from="1600536168701" duration="51875000" />
-      <workItem from="1601540395602" duration="25275000" />
+      <workItem from="1601540395602" duration="36683000" />
+      <workItem from="1601964012302" duration="22805000" />
     </task>
     <task id="LOCAL-00001" summary="Register feature">
       <created>1600591224271</created>
@@ -203,7 +218,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600598468650</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="bet feature">
+      <created>1601654544258</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1601654544258</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -239,7 +261,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Register feature" />
-    <option name="LAST_COMMIT_MESSAGE" value="Register feature" />
+    <MESSAGE value="bet feature" />
+    <option name="LAST_COMMIT_MESSAGE" value="bet feature" />
   </component>
   <component name="WindowStateProjectService">
     <state x="425" y="192" width="505" height="418" key="#TODO" timestamp="1600598568333">
@@ -250,90 +273,98 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="278" y="59" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1366.741@0.27.1366.741" timestamp="1599892153514" />
+    <state width="433" height="497" key="DebuggerActiveHint" timestamp="1602058691324">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state width="433" height="497" key="DebuggerActiveHint/0.27.1366.741@0.27.1366.741" timestamp="1602058691324" />
+    <state x="466" y="155" width="424" height="491" key="FileChooserDialogImpl" timestamp="1601742130675">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="466" y="155" width="424" height="491" key="FileChooserDialogImpl/0.27.1366.741@0.27.1366.741" timestamp="1601742130675" />
     <state x="546" y="297" width="273" height="207" key="Github.ShareDialog" timestamp="1600591282793">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="546" y="297" width="273" height="207" key="Github.ShareDialog/0.27.1366.741@0.27.1366.741" timestamp="1600591282793" />
-    <state width="1320" height="172" key="GridCell.Tab.0.bottom" timestamp="1601653081573">
+    <state width="1320" height="172" key="GridCell.Tab.0.bottom" timestamp="1602072751235">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="172" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1601653081573" />
-    <state width="1320" height="172" key="GridCell.Tab.0.center" timestamp="1601653081564">
+    <state width="1320" height="172" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1602072751235" />
+    <state width="1320" height="172" key="GridCell.Tab.0.center" timestamp="1602072751232">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="172" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1601653081564" />
-    <state width="1320" height="172" key="GridCell.Tab.0.left" timestamp="1601653081562">
+    <state width="1320" height="172" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1602072751232" />
+    <state width="1320" height="172" key="GridCell.Tab.0.left" timestamp="1602072751231">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="172" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1601653081562" />
-    <state width="1320" height="172" key="GridCell.Tab.0.right" timestamp="1601653081571">
+    <state width="1320" height="172" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1602072751231" />
+    <state width="1320" height="172" key="GridCell.Tab.0.right" timestamp="1602072751234">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="172" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1601653081571" />
-    <state width="1320" height="242" key="GridCell.Tab.1.bottom" timestamp="1601646916032">
+    <state width="1320" height="172" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1602072751234" />
+    <state width="1320" height="235" key="GridCell.Tab.1.bottom" timestamp="1602058715572">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="242" key="GridCell.Tab.1.bottom/0.27.1366.741@0.27.1366.741" timestamp="1601646916032" />
-    <state width="1320" height="242" key="GridCell.Tab.1.center" timestamp="1601646916032">
+    <state width="1320" height="235" key="GridCell.Tab.1.bottom/0.27.1366.741@0.27.1366.741" timestamp="1602058715572" />
+    <state width="1320" height="235" key="GridCell.Tab.1.center" timestamp="1602058715570">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="242" key="GridCell.Tab.1.center/0.27.1366.741@0.27.1366.741" timestamp="1601646916032" />
-    <state width="1320" height="242" key="GridCell.Tab.1.left" timestamp="1601646916031">
+    <state width="1320" height="235" key="GridCell.Tab.1.center/0.27.1366.741@0.27.1366.741" timestamp="1602058715570" />
+    <state width="1320" height="235" key="GridCell.Tab.1.left" timestamp="1602058715569">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="242" key="GridCell.Tab.1.left/0.27.1366.741@0.27.1366.741" timestamp="1601646916031" />
-    <state width="1320" height="242" key="GridCell.Tab.1.right" timestamp="1601646916032">
+    <state width="1320" height="235" key="GridCell.Tab.1.left/0.27.1366.741@0.27.1366.741" timestamp="1602058715569" />
+    <state width="1320" height="235" key="GridCell.Tab.1.right" timestamp="1602058715571">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="242" key="GridCell.Tab.1.right/0.27.1366.741@0.27.1366.741" timestamp="1601646916032" />
-    <state width="1320" height="242" key="GridCell.Tab.2.bottom" timestamp="1601646916033">
+    <state width="1320" height="235" key="GridCell.Tab.1.right/0.27.1366.741@0.27.1366.741" timestamp="1602058715571" />
+    <state width="1320" height="235" key="GridCell.Tab.2.bottom" timestamp="1602058715574">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="242" key="GridCell.Tab.2.bottom/0.27.1366.741@0.27.1366.741" timestamp="1601646916033" />
-    <state width="1320" height="242" key="GridCell.Tab.2.center" timestamp="1601646916033">
+    <state width="1320" height="235" key="GridCell.Tab.2.bottom/0.27.1366.741@0.27.1366.741" timestamp="1602058715574" />
+    <state width="1320" height="235" key="GridCell.Tab.2.center" timestamp="1602058715573">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="242" key="GridCell.Tab.2.center/0.27.1366.741@0.27.1366.741" timestamp="1601646916033" />
-    <state width="1320" height="242" key="GridCell.Tab.2.left" timestamp="1601646916032">
+    <state width="1320" height="235" key="GridCell.Tab.2.center/0.27.1366.741@0.27.1366.741" timestamp="1602058715573" />
+    <state width="1320" height="235" key="GridCell.Tab.2.left" timestamp="1602058715572">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="242" key="GridCell.Tab.2.left/0.27.1366.741@0.27.1366.741" timestamp="1601646916032" />
-    <state width="1320" height="242" key="GridCell.Tab.2.right" timestamp="1601646916033">
+    <state width="1320" height="235" key="GridCell.Tab.2.left/0.27.1366.741@0.27.1366.741" timestamp="1602058715572" />
+    <state width="1320" height="235" key="GridCell.Tab.2.right" timestamp="1602058715573">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="242" key="GridCell.Tab.2.right/0.27.1366.741@0.27.1366.741" timestamp="1601646916033" />
-    <state width="1320" height="242" key="GridCell.Tab.3.bottom" timestamp="1601646916035">
+    <state width="1320" height="235" key="GridCell.Tab.2.right/0.27.1366.741@0.27.1366.741" timestamp="1602058715573" />
+    <state width="1320" height="235" key="GridCell.Tab.3.bottom" timestamp="1602058715579">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="242" key="GridCell.Tab.3.bottom/0.27.1366.741@0.27.1366.741" timestamp="1601646916035" />
-    <state width="1320" height="242" key="GridCell.Tab.3.center" timestamp="1601646916034">
+    <state width="1320" height="235" key="GridCell.Tab.3.bottom/0.27.1366.741@0.27.1366.741" timestamp="1602058715579" />
+    <state width="1320" height="235" key="GridCell.Tab.3.center" timestamp="1602058715577">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="242" key="GridCell.Tab.3.center/0.27.1366.741@0.27.1366.741" timestamp="1601646916034" />
-    <state width="1320" height="242" key="GridCell.Tab.3.left" timestamp="1601646916034">
+    <state width="1320" height="235" key="GridCell.Tab.3.center/0.27.1366.741@0.27.1366.741" timestamp="1602058715577" />
+    <state width="1320" height="235" key="GridCell.Tab.3.left" timestamp="1602058715575">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="242" key="GridCell.Tab.3.left/0.27.1366.741@0.27.1366.741" timestamp="1601646916034" />
-    <state width="1320" height="242" key="GridCell.Tab.3.right" timestamp="1601646916034">
+    <state width="1320" height="235" key="GridCell.Tab.3.left/0.27.1366.741@0.27.1366.741" timestamp="1602058715575" />
+    <state width="1320" height="235" key="GridCell.Tab.3.right" timestamp="1602058715578">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="242" key="GridCell.Tab.3.right/0.27.1366.741@0.27.1366.741" timestamp="1601646916034" />
-    <state width="1320" height="242" key="GridCell.Tab.4.bottom" timestamp="1601646916036">
+    <state width="1320" height="235" key="GridCell.Tab.3.right/0.27.1366.741@0.27.1366.741" timestamp="1602058715578" />
+    <state width="1320" height="235" key="GridCell.Tab.4.bottom" timestamp="1602058715581">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="242" key="GridCell.Tab.4.bottom/0.27.1366.741@0.27.1366.741" timestamp="1601646916036" />
-    <state width="1320" height="242" key="GridCell.Tab.4.center" timestamp="1601646916035">
+    <state width="1320" height="235" key="GridCell.Tab.4.bottom/0.27.1366.741@0.27.1366.741" timestamp="1602058715581" />
+    <state width="1320" height="235" key="GridCell.Tab.4.center" timestamp="1602058715580">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="242" key="GridCell.Tab.4.center/0.27.1366.741@0.27.1366.741" timestamp="1601646916035" />
-    <state width="1320" height="242" key="GridCell.Tab.4.left" timestamp="1601646916035">
+    <state width="1320" height="235" key="GridCell.Tab.4.center/0.27.1366.741@0.27.1366.741" timestamp="1602058715580" />
+    <state width="1320" height="235" key="GridCell.Tab.4.left" timestamp="1602058715579">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="242" key="GridCell.Tab.4.left/0.27.1366.741@0.27.1366.741" timestamp="1601646916035" />
-    <state width="1320" height="242" key="GridCell.Tab.4.right" timestamp="1601646916036">
+    <state width="1320" height="235" key="GridCell.Tab.4.left/0.27.1366.741@0.27.1366.741" timestamp="1602058715579" />
+    <state width="1320" height="235" key="GridCell.Tab.4.right" timestamp="1602058715580">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="242" key="GridCell.Tab.4.right/0.27.1366.741@0.27.1366.741" timestamp="1601646916036" />
+    <state width="1320" height="235" key="GridCell.Tab.4.right/0.27.1366.741@0.27.1366.741" timestamp="1602058715580" />
     <state width="257" height="518" key="HiddenNamespacesPopup" timestamp="1601232543454">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
@@ -346,10 +377,10 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="100" y="127" width="1166" height="541" key="VCS.FileHistoryDialog/0.27.1366.741@0.27.1366.741" timestamp="1600669290630" />
-    <state x="278" y="119" width="800" height="564" key="Vcs.Push.Dialog.v2" timestamp="1600598473462">
+    <state x="278" y="119" width="800" height="564" key="Vcs.Push.Dialog.v2" timestamp="1601654547295">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="278" y="119" width="800" height="564" key="Vcs.Push.Dialog.v2/0.27.1366.741@0.27.1366.741" timestamp="1600598473462" />
+    <state x="278" y="119" width="800" height="564" key="Vcs.Push.Dialog.v2/0.27.1366.741@0.27.1366.741" timestamp="1601654547295" />
     <state x="347" y="174" key="run.anything.popup" timestamp="1600972960843">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
@@ -363,19 +394,6 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/DB KP/Controllers/BlackJackController.cs</url>
-          <line>45</line>
-          <properties documentPath="$PROJECT_DIR$/DB KP/Controllers/BlackJackController.cs" initialLine="44">
-            <startOffsets>
-              <option value="1641" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1642" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/DB KP/Controllers/AuthenticationController.cs</url>
           <line>41</line>
           <properties documentPath="$PROJECT_DIR$/DB KP/Controllers/AuthenticationController.cs" initialLine="41">
@@ -387,6 +405,32 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/DB KP/Controllers/BlackJackController.cs</url>
+          <line>51</line>
+          <properties documentPath="$PROJECT_DIR$/DB KP/Controllers/BlackJackController.cs" initialLine="50">
+            <startOffsets>
+              <option value="1752" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1753" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/DB KP/Controllers/BlackJackController.cs</url>
+          <line>100</line>
+          <properties documentPath="$PROJECT_DIR$/DB KP/Controllers/BlackJackController.cs" initialLine="100">
+            <startOffsets>
+              <option value="3378" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3379" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

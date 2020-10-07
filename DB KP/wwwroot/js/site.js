@@ -3,6 +3,16 @@
 
 // Write your JavaScript code.
 
+function wrapCards(cards) {
+    alert(JSON.stringify(cards));
+    var computerCardsHtml = "<p>";
+    for (const card in cards.computer) {
+        computerCardsHtml += card + " ";
+    }
+    computerCardsHtml += "</p>";
+    return computerCardsHtml;
+}
+
 var send = function ()
 {
     var count = $("#betCount").val();
@@ -17,8 +27,14 @@ var send = function ()
             success:
                 function (response)
                 {
-                    if (response.operationStatus == true) {
-                        $("#user-chips").html(response.chips);    
+                    console.log(response);
+                    if (response.operationStatus === true) {
+                        alert(JSON.stringify(response.cards));
+                        $("#user-chips").html(response.chips);   
+                        $(".computer-score").html(response.score.computer);
+                        $(".user-score").html(response.score.user);
+                        $(".computer-cards").html(wrapCards(response.cards.computer));
+                        $(".user-cards").html(wrapCards(response.cards.user));
                     } else {
                         alert("smthng wrng with bet value");
                     }
