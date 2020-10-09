@@ -13,5 +13,10 @@ namespace DB_KP.Models
         [Key]
         [Column("card_id")]
         public int CardId { set; get; }
+
+        public override string ToString()
+        {
+            return "Rank: " + Rank + "\n Score: " + Score + "\n CardId:" + CardId + "\n SuitId: " + SuitId + "\n";
+        }
     }
 }

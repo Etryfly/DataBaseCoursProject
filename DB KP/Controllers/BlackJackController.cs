@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using DB_KP.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -13,13 +14,13 @@ namespace DB_KP.Controllers
     public class BlackJackController : Controller
     {
         private ApplicationContext db;
-       
+
         private readonly ILogger<BlackJackController> _logger;
 
         public BlackJackController(ApplicationContext db, ILogger<BlackJackController> logger)
         {
             _logger = logger;
-            
+
             this.db = db;
         }
 
@@ -31,46 +32,46 @@ namespace DB_KP.Controllers
                 ModelState.AddModelError("Login", "Please, login in");
                 return RedirectToAction("Loginin", "Authentication");
             }
-            
+
             // db.GetService<ILoggerFactory>().AddProvider(new DBLoggerProvider());
-            UserModel userModel = db.Users.FirstOrDefault(u => u.Login == User.Identity.Name );
+            UserModel userModel = db.Users.FirstOrDefault(u => u.Login == User.Identity.Name);
             MoneyModel moneyModel = db.Money.FirstOrDefault(u => u.Id == userModel.Id);
-            
+
             GameStatsModel gameStatsModel = db.GameStats.FirstOrDefault(u => u.Id == userModel.Id);
             _logger.LogInformation("BlackJack: real userId: " + userModel.Id + " id from money: "
-            + moneyModel.Id + " money: " + moneyModel.Chips);
+                                   + moneyModel.Id + " money: " + moneyModel.Chips);
             userModel.Money = moneyModel;
             userModel.GameStats = gameStatsModel;
-            
+
             return View(userModel);
         }
 
         #region CardOperation
 
-        
-        public List<HandModel> GetHandsForUserWithId( int id)
+
+        public List<HandModel> GetHandsForUserWithId(int id)
         {
-            
-            if (db.Hand.FirstOrDefault(c => c.user_id == id) != null) 
-                return  db.Hand.Where(c => c.user_id == id).ToList();
-            
-           
+
+            if (db.Hand.FirstOrDefault(c => c.user_id == id) != null)
+                return db.Hand.Where(c => c.user_id == id).ToList();
+
+
             return new List<HandModel>();
         }
-        
-        public List<CardModel> GetAllCardsByHandModel( HandModel userHand)
+
+        public List<CardModel> GetAllCardsByHandModel(HandModel userHand)
         {
             List<CardModel> result = new List<CardModel>();
-            
-            
-            
-        
+
+
+
+
             List<HandCardModel> handCards = db.HandCard.Where(c => c.HandId == userHand.hand_id).ToList();
             foreach (var card in handCards)
             {
-                result.Add(db.Card.FirstOrDefault( c => c.CardId == card.CardId));
+                result.Add(db.Card.FirstOrDefault(c => c.CardId == card.CardId));
             }
-        
+
             return result;
         }
 
@@ -90,6 +91,7 @@ namespace DB_KP.Controllers
             return allCard.Except(usedCard).ToList();
 
         }
+
         public List<CardModel> getNCardForUserWithId(int n, int id)
         {
             List<CardModel> availableCards = getAllAvailableCardsByUserId(id);
@@ -102,11 +104,11 @@ namespace DB_KP.Controllers
             HandModel hand = db.Hand.FirstOrDefault(h => h.user_id == id && h.hand_type_id == typeId);
             if (hand == null)
             {
-                hand = new HandModel(){user_id =  id, hand_type_id = typeId};
+                hand = new HandModel() {user_id = id, hand_type_id = typeId};
                 db.Hand.Add(hand);
                 db.SaveChanges();
             }
-            
+
             foreach (var card in cards)
             {
                 db.HandCard.Add(new HandCardModel() {CardId = card.CardId, HandId = hand.hand_id});
@@ -117,16 +119,127 @@ namespace DB_KP.Controllers
         }
 
         #endregion
-        
+
+        private int CountScore(List<CardModel> cards)
+        {
+            int acesCount = 0;
+            int score = 0;
+            foreach (var card in cards)
+            {
+                if (card.Rank == 14) acesCount++;
+                score += card.Score;
+            }
+
+            if (score > 21 && acesCount > 0)
+            {
+                for (int i = 0; i < acesCount; i++)
+                {
+                    if (score > 21)
+                    {
+                        score -= 10;
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+            }
+
+            return score;
+        }
+
+        private enum gameState
+        {
+            userWin = 1,
+            userLose = 2,
+            ok = 3,
+            error = 4
+        }
+
+        public JsonResult Stand()
+        {
+            const int USER_HAND_TYPE = 1;
+            const int COMPUTER_HAND_TYPE = 2;
+
+            UserModel userModel = db.Users.FirstOrDefault(u => u.Login == User.Identity.Name);
+            List<HandModel> hands = GetHandsForUserWithId(userModel.Id);
+            if (hands.Count != 2)
+            {
+                _logger.LogInformation("Hands count != 2 in method CheckWin");
+                return Json(new
+                {
+                    state = gameState.error,
+                    message = "Hands count != 2 in method CheckWin"
+                });
+            }
+
+
+            int computerScore = 0;
+            int userScore = 0;
+
+            List<CardModel> computerCards = new List<CardModel>();
+
+            foreach (var hand in hands)
+            {
+                if (hand.hand_type_id == COMPUTER_HAND_TYPE)
+                {
+                    computerCards =  GetAllCardsByHandModel(hand);
+                    computerScore = CountScore(computerCards);
+                }
+
+                if (hand.hand_type_id == USER_HAND_TYPE)
+                {
+                    userScore = CountScore(GetAllCardsByHandModel(hand));
+                }
+
+                foreach (var handCard in db.HandCard.Where(h => h.HandId == hand.hand_id))
+                {
+                    db.HandCard.Remove(handCard);
+                }
+
+                db.Hand.Remove(hand);
+            }
+            
+           
+
+            if (userScore > computerScore && userScore <= 21)
+            {
+                return Json(new
+                {
+                    ComputerCards = computerCards,
+                    state = gameState.userWin,
+                    message = ""
+                });
+            }
+
+            if (computerScore > userScore && computerScore <= 21)
+            {
+                return Json(new
+                {
+                    ComputerCards = computerCards,
+                    state = gameState.userLose,
+                    message = ""
+                });
+            }
+
+            return Json(new
+            {
+                state = gameState.ok,
+                message = ""
+            });
+
+        }
+
+
+
         [HttpPost]
         public JsonResult Bet(int count)
         {
-           
             const bool NOT_ENOUGH_CHIPS = false;
             const bool OK = true;
             const int USER_HAND_TYPE = 1;
             const int COMPUTER_HAND_TYPE = 2;
-            UserModel userModel = db.Users.FirstOrDefault(u => u.Login == User.Identity.Name );
+            UserModel userModel = db.Users.FirstOrDefault(u => u.Login == User.Identity.Name);
             MoneyModel moneyModel = db.Money.FirstOrDefault(u => u.Id == userModel.Id);
             _logger.LogDebug("BlackJack - Bet -  count: " + count);
             // ViewBag.Count = count;
@@ -139,36 +252,38 @@ namespace DB_KP.Controllers
                 BetsModel betsModel = db.Bets.FirstOrDefault(b => b.UserId == userModel.Id);
                 if (betsModel == null)
                 {
-                    betsModel = new BetsModel(){Bet = count, UserId = userModel.Id};
+                    betsModel = new BetsModel() {Bet = count, UserId = userModel.Id};
                     db.Bets.Add(betsModel);
                 }
                 else
                 {
                     betsModel.Bet += count;
                 }
+
                 db.SaveChanges();
             }
             else
             {
                 status = NOT_ENOUGH_CHIPS;
             }
-            
-            
+
+
             List<CardModel> userCards = getNCardForUserWithId(2, userModel.Id);
             setCardsForUserWithIdAndHandTypeId(userCards, userModel.Id, USER_HAND_TYPE);
-            List<CardModel> computerCards = getNCardForUserWithId(2, userModel.Id);
+            List<CardModel> computerCards = getNCardForUserWithId(1, userModel.Id);
             setCardsForUserWithIdAndHandTypeId(computerCards, userModel.Id, COMPUTER_HAND_TYPE);
-            int computerScore = 0;
-            int userScore = 0;
-            foreach (var card in userCards)
-            {
-                userScore += card.Score;
-            }
-            
-            foreach (var card in computerCards)
-            {
-                computerScore += card.Score;
-            }
+
+            int userScore = CountScore(userCards);
+
+
+
+
+
+            StringBuilder userScoreStringBuilder = new StringBuilder(userScore.ToString());
+
+
+
+
             return Json(new
             {
                 chips = moneyModel.Chips,
@@ -178,14 +293,63 @@ namespace DB_KP.Controllers
                     user = userCards,
                     computer = computerCards
                 },
-                score = new
-                {
-                    computer = computerScore,
-                    user = userScore
-                }
+                score = userScoreStringBuilder.ToString()
+
             });
 
         }
-        
+
+
+
+        public JsonResult IsSomebodyScoreMoreThan21()
+        {
+            const int USER_HAND_TYPE = 1;
+            const int COMPUTER_HAND_TYPE = 2;
+
+            UserModel userModel = db.Users.FirstOrDefault(u => u.Login == User.Identity.Name);
+            List<HandModel> hands = GetHandsForUserWithId(userModel.Id);
+            if (hands.Count != 2)
+            {
+                _logger.LogInformation("Hands count != 2 in method CheckWin");
+                return Json(new
+                {
+                    state = gameState.error,
+                    message = "Hands count != 2 in method CheckWin"
+                });
+            }
+
+
+            int computerScore = 0;
+            int userScore = 0;
+
+            foreach (var hand in hands)
+            {
+                if (hand.hand_type_id == COMPUTER_HAND_TYPE)
+                {
+                    computerScore = CountScore(GetAllCardsByHandModel(hand));
+                }
+
+                if (hand.hand_type_id == USER_HAND_TYPE)
+                {
+                    userScore = CountScore(GetAllCardsByHandModel(hand));
+                }
+            }
+
+            if (userScore > 21)
+                return Json(new
+                {
+                    gameState.userLose
+                });
+            if (computerScore > 21)
+                return Json(new
+                {
+                    gameState.userWin
+                });
+            return Json(new
+            {
+                gameState.ok
+            });
+        }
+
     }
 }    

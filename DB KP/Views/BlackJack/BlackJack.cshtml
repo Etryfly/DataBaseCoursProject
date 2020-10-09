@@ -19,22 +19,29 @@
     Your chips: <p id="user-chips">@Model.Money.Chips</p>
 
 </div>
-<div class="computer-score"></div>
-<div class="computer-cards">
-    
+
+<div class="game-interface">
+
+    <p>Dealer cards</p>
+    <p> <div class="computer-cards">    </div>
+        
+    <br><br> <!-- 
+    TODO сверстать нормально
+    !-->
+    <br><br>
+
+
+    <p>Your score</p>
+    <p><div class="user-score"></div>
+    <p>Your cards</p>
+    <p><div class="user-cards"></div>
+
+    <button>Hit</button>
+    <button>Stand</button>
 </div>
 
 <div class="bet-interface">
     <p><input type="number" id="betCount"></p>
     <p>Bet value </p> 
-    <p><button id="sendButton" onclick="send()">Bet</button></p>
+    <p><button id="sendButton" onclick="bet()">Bet</button></p>
 </div>
-
-<div class="user-score"></div>
-<div class="user-cards"></div>
-
-<button>Hit</button>
-<button>Stand</button>
-
-
-

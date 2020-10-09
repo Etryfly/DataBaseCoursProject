@@ -87,3 +87,7 @@ body {
   margin-left:80%;
   color:darkslategray;
 }
+
+.game-interface {
+  display: none;
+}
