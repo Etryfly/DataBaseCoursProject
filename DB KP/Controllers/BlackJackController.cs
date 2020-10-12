@@ -221,6 +221,7 @@ namespace DB_KP.Controllers
             {
                 moneyModel.Chips += bet * 2;
                 db.SaveChanges();
+                _logger.LogDebug(string.Format("Stand: user win. User score - {0}, computer score - {1}", userScore, computerScore) );
                 return Json(new
                 {
                     ComputerCards = computerCards,
@@ -233,6 +234,7 @@ namespace DB_KP.Controllers
 
             if (computerScore > userScore && computerScore <= 21)
             {
+                _logger.LogDebug(string.Format("Stand: user lose. User score - {0}, computer score - {1}", userScore, computerScore) );
                 return Json(new
                 {
                     ComputerCards = computerCards,
@@ -247,6 +249,7 @@ namespace DB_KP.Controllers
             {
                 moneyModel.Chips += bet * 2;
                 db.SaveChanges();
+                _logger.LogDebug(string.Format("Stand: user win (computer score > 21). User score - {0}, computer score - {1}", userScore, computerScore) );
                 return Json(new
                 {
                     ComputerCards = computerCards,
@@ -259,6 +262,7 @@ namespace DB_KP.Controllers
 
             if (userScore > 21)
             {
+                _logger.LogDebug(string.Format("Stand: user lose (user score > 21). User score - {0}, computer score - {1}", userScore, computerScore) );
                 return Json(new
                 {
                     ComputerCards = computerCards,
@@ -268,7 +272,21 @@ namespace DB_KP.Controllers
                     ComputerScore = computerScore
                 });
             }
-            
+
+            if (userScore == computerScore)
+            {
+                _logger.LogDebug(string.Format("Stand: user win (user score == computer score). User score - {0}, computer score - {1}", userScore, computerScore) );
+                return Json(new
+                {
+                    ComputerCards = computerCards,
+                    state = gameState.userWin,
+                    message = "",
+                    userBet = bet,
+                    ComputerScore = computerScore
+                });
+            }
+            _logger.LogDebug(string.Format("Stand: OK. User score - {0}, computer score - {1}", userScore, computerScore) );
+
             return Json(new
             {
                 state = gameState.ok,
@@ -351,11 +369,12 @@ namespace DB_KP.Controllers
             List<HandModel> hands = GetHandsForUserWithId(userModel.Id);
             if (hands.Count != 2)
             {
-                _logger.LogInformation("Hands count != 2 in method CheckWin");
+                string errorMessage = "Hands count != 2 in method IsUserScoreMoreThan21";
+                _logger.LogInformation(errorMessage);
                 return Json(new
                 {
                     state = gameState.error,
-                    message = "Hands count != 2 in method CheckWin"
+                    message = errorMessage
                 });
             }
 
@@ -364,12 +383,10 @@ namespace DB_KP.Controllers
             int userScore = 0;
 
             List<CardModel> userCards = new List<CardModel>();
-            HandModel userHand = null;
             foreach (var hand in hands)
             {
                 if (hand.hand_type_id == USER_HAND_TYPE)
                 {
-                    userHand = hand;
                     userCards = GetAllCardsByHandModel(hand);
                     userScore = CountScore(userCards);
                 }
@@ -377,7 +394,9 @@ namespace DB_KP.Controllers
 
             if (userScore > 21)
             {
-                ClearHandsByHand(userHand);
+                _logger.LogDebug(string.Format("Hit: user lose. User score - {0}", userScore) );
+                ClearHandsByHand(hands[0]);
+                ClearHandsByHand(hands[1]);
                 return Json(new
                 {
                     state = gameState.userLose,

@@ -29,13 +29,12 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c6441d9c-13b7-4a81-9d5f-5adeda0ad1bb" name="Default Changelist" comment="Backend prepared to stand feature">
+    <list default="true" id="c6441d9c-13b7-4a81-9d5f-5adeda0ad1bb" name="Default Changelist" comment="Almost done. TODO debug hit and stand">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DB KP/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DB KP/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DB KP/Controllers/BlackJackController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DB KP/Controllers/BlackJackController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DB KP/DBLog.txt" beforeDir="false" afterPath="$PROJECT_DIR$/DB KP/DBLog.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB KP/Views/BlackJack/BlackJack.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/DB KP/Views/BlackJack/BlackJack.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB KP/wwwroot/css/site.css" beforeDir="false" afterPath="$PROJECT_DIR$/DB KP/wwwroot/css/site.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB KP/wwwroot/js/site.js" beforeDir="false" afterPath="$PROJECT_DIR$/DB KP/wwwroot/js/site.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/DB KP/appsettings.Development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/DB KP/appsettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +71,6 @@
       <list>
         <option value="$PROJECT_DIR$/DB KP/Models/LeaderboardModel.cs" />
         <option value="$PROJECT_DIR$/DB KP/Views/Home/Index.cshtml" />
-        <option value="$PROJECT_DIR$/DB KP/appsettings.json" />
         <option value="$PROJECT_DIR$/DB KP/Program.cs" />
         <option value="$PROJECT_DIR$/DB KP/Views/Home/BlackJack.cshtml" />
         <option value="$PROJECT_DIR$/DB KP/Views/Home/Login.cshtml" />
@@ -81,7 +79,6 @@
         <option value="$PROJECT_DIR$/DB KP/Views/Login/Login.cshtml" />
         <option value="$PROJECT_DIR$/DB KP/Views/Login/Register.cshtml" />
         <option value="$PROJECT_DIR$/DB KP/Controllers/AuthController.cs" />
-        <option value="$PROJECT_DIR$/DB KP/appsettings.Development.json" />
         <option value="$PROJECT_DIR$/DB KP/Views/Authentication/Login.cshtml" />
         <option value="$PROJECT_DIR$/DB KP/Views/Authentication/Loginin.cshtml" />
         <option value="$PROJECT_DIR$/DB KP/Views/Shared/_Layout.cshtml" />
@@ -120,6 +117,8 @@
         <option value="$PROJECT_DIR$/DB KP/wwwroot/css/site.css" />
         <option value="$PROJECT_DIR$/DB KP/Views/BlackJack/BlackJack.cshtml" />
         <option value="$PROJECT_DIR$/DB KP/wwwroot/js/site.js" />
+        <option value="$PROJECT_DIR$/DB KP/appsettings.json" />
+        <option value="$PROJECT_DIR$/DB KP/appsettings.Development.json" />
         <option value="$PROJECT_DIR$/DB KP/Controllers/BlackJackController.cs" />
       </list>
     </option>
@@ -199,7 +198,7 @@
       <workItem from="1601964012302" duration="28359000" />
       <workItem from="1602176949119" duration="19811000" />
       <workItem from="1602439673819" duration="2305000" />
-      <workItem from="1602485315464" duration="12216000" />
+      <workItem from="1602485315464" duration="16237000" />
     </task>
     <task id="LOCAL-00001" summary="Register feature">
       <created>1600591224271</created>
@@ -236,7 +235,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602238032809</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Almost done. TODO debug hit and stand">
+      <created>1602509697729</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1602509697729</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -275,7 +281,8 @@
     <MESSAGE value="bet feature" />
     <MESSAGE value="Preparation to black jack game process" />
     <MESSAGE value="Backend prepared to stand feature" />
-    <option name="LAST_COMMIT_MESSAGE" value="Backend prepared to stand feature" />
+    <MESSAGE value="Almost done. TODO debug hit and stand" />
+    <option name="LAST_COMMIT_MESSAGE" value="Almost done. TODO debug hit and stand" />
   </component>
   <component name="WindowStateProjectService">
     <state x="425" y="192" width="505" height="418" key="#TODO" timestamp="1600598568333">
@@ -298,22 +305,22 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="546" y="297" width="273" height="207" key="Github.ShareDialog/0.27.1366.741@0.27.1366.741" timestamp="1600591282793" />
-    <state width="1320" height="140" key="GridCell.Tab.0.bottom" timestamp="1602509567161">
+    <state width="1320" height="140" key="GridCell.Tab.0.bottom" timestamp="1602517565243">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="140" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1602509567161" />
-    <state width="1320" height="140" key="GridCell.Tab.0.center" timestamp="1602509567155">
+    <state width="1320" height="140" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1602517565243" />
+    <state width="1320" height="140" key="GridCell.Tab.0.center" timestamp="1602517565241">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="140" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1602509567155" />
-    <state width="1320" height="140" key="GridCell.Tab.0.left" timestamp="1602509567154">
+    <state width="1320" height="140" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1602517565241" />
+    <state width="1320" height="140" key="GridCell.Tab.0.left" timestamp="1602517565240">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="140" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1602509567154" />
-    <state width="1320" height="140" key="GridCell.Tab.0.right" timestamp="1602509567155">
+    <state width="1320" height="140" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1602517565240" />
+    <state width="1320" height="140" key="GridCell.Tab.0.right" timestamp="1602517565242">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="140" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1602509567155" />
+    <state width="1320" height="140" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1602517565242" />
     <state width="1320" height="235" key="GridCell.Tab.1.bottom" timestamp="1602487556518">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
@@ -390,10 +397,10 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="100" y="127" width="1166" height="541" key="VCS.FileHistoryDialog/0.27.1366.741@0.27.1366.741" timestamp="1600669290630" />
-    <state x="278" y="119" width="800" height="564" key="Vcs.Push.Dialog.v2" timestamp="1602238035967">
+    <state x="278" y="119" width="800" height="564" key="Vcs.Push.Dialog.v2" timestamp="1602509702184">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="278" y="119" width="800" height="564" key="Vcs.Push.Dialog.v2/0.27.1366.741@0.27.1366.741" timestamp="1602238035967" />
+    <state x="278" y="119" width="800" height="564" key="Vcs.Push.Dialog.v2/0.27.1366.741@0.27.1366.741" timestamp="1602509702184" />
     <state x="347" y="174" key="run.anything.popup" timestamp="1600972960843">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
