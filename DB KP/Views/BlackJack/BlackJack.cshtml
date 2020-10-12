@@ -20,8 +20,11 @@
 
 </div>
 
-<div class="game-interface">
+<div class="message-field"></div>
 
+<div class="game-interface">
+    <p>Computer score</p>
+    <p><div class="computer-score"></div>
     <p>Dealer cards</p>
     <p> <div class="computer-cards">    </div>
         
@@ -35,13 +38,17 @@
     <p><div class="user-score"></div>
     <p>Your cards</p>
     <p><div class="user-cards"></div>
-
-    <button>Hit</button>
-    <button>Stand</button>
+    <div class="game-buttons">
+        <button onclick="hit()">Hit</button>
+        <button onclick="stand()">Stand</button>
+    </div>
 </div>
 
 <div class="bet-interface">
-    <p><input type="number" id="betCount"></p>
     <p>Bet value </p> 
+    <p><input type="number" id="betCount"></p>
+    
     <p><button id="sendButton" onclick="bet()">Bet</button></p>
 </div>
+
+<button id="ok-button" onclick="showBet()">OK</button>

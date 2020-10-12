@@ -39,7 +39,13 @@ function wrapCards(cards) {
     return computerCardsHtml;
 }
 
-
+function showBet() {
+    $(".game-interface").hide();
+    $(".bet-interface").show();
+    $("#ok-button").hide();
+    $(".game-buttons").hide();
+    $(".message-field").hide();
+}
 
 var bet = function ()
 {
@@ -59,9 +65,11 @@ var bet = function ()
                     if (response.operationStatus === true) {
                         $(".game-interface").show();
                         $(".bet-interface").hide();
+                        $(".game-buttons").show();
                         $("#user-chips").html(response.chips);   
                         // alert(JSON.stringify(response.cards.computer))
-                        $(".user-score").html(response.score);
+                        $(".user-score").html(response.userScore);
+                        $(".computer-score").html(response.computerScore);
                         $(".computer-cards").html(wrapCards(response.cards.computer) );
                         $(".user-cards").html(wrapCards(response.cards.user));
                     } else {
@@ -76,12 +84,20 @@ var bet = function ()
 
 };
 
+function afterGame(response) {
+    $("#ok-button").show();
+    $(".computer-score").show();
+    $(".message-field").show();
+    $(".game-buttons").hide();
+    
+    if (response.state == gameStatus.userWin) $(".message-field").html("You win ", response.bet, " chips")
+    if (response.state == gameStatus.userLose) $(".message-field").html("You lose ", response.bet, " chips")
+    
+}
 
 function stand()
 {
-    var count = $("#betCount").val();
-
-    // alert('@Url.Action("Bet", "BlackJack")');
+    
     $.ajax(
         {
             type: 'POST',
@@ -91,18 +107,39 @@ function stand()
                 function (response)
                 {
                     console.log(response);
-                    if (response.operationStatus === true) {
-                        $(".game-interface").show();
-                        $(".bet-interface").hide();
-                        $("#user-chips").html(response.chips);
-                        // alert(JSON.stringify(response.cards.computer))
-                        $(".user-score").html(response.score);
-                        $(".computer-cards").html(wrapCards(response.cards.computer) );
-                        $(".user-cards").html(wrapCards(response.cards.user));
-                    } else {
-                        alert("smthng wrng with bet value");
-                    }
+                    $(".computer-score").html(response.computerScore);
+                    $(".computer-cards").html(wrapCards(response.computerCards));
+                    afterGame(response);
+                },
+            error: function(xhr, status, error) {
+                alert(error.message)
+            }
+        });
 
+};
+
+
+
+function hit()
+{
+
+    $.ajax(
+        {
+            type: 'POST',
+            dataType: 'json',
+            url: "/BlackJack/Hit",
+            success:
+                function (response)
+                {
+                    if (response.state == gameStatus.userLose) {
+                        console.log(response);
+                        
+                        // $(".user-score").html(response.score);
+                        afterGame(response);
+                        
+                    }
+                    $(".user-cards").html(wrapCards(response.userCards));
+                    $(".user-score").html(response.userScore);
                 },
             error: function(xhr, status, error) {
                 alert(error.message)

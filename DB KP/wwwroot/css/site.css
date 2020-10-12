@@ -91,3 +91,11 @@ body {
 .game-interface {
   display: none;
 }
+
+.message-field {
+  color:red;
+}
+
+#ok-button {
+  display:none;
+}
