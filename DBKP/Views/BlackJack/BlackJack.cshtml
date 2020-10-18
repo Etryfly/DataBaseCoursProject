@@ -1,0 +1,47 @@
+﻿@using System.Security.Claims
+@model UserModel
+
+@{
+    Layout = "_Layout";
+}
+
+
+<h2 class="text-center">@ViewData["Title"]</h2>
+<div class="user-info">
+    <p>Login: @User.Identity.Name</p>
+    Your chips: <p id="user-chips">@Model.Money.Chips</p>
+
+</div>
+
+<div class="message-field"></div>
+
+<div class="game-interface">
+    <p>Computer score</p>
+    <p><div class="computer-score"></div>
+    <p>Dealer cards</p>
+    <p> <div class="computer-cards">    </div>
+        
+    <br><br> <!-- 
+    TODO сверстать нормально
+    !-->
+    <br><br>
+
+
+    <p>Your score</p>
+    <p><div class="user-score"></div>
+    <p>Your cards</p>
+    <p><div class="user-cards"></div>
+    <div class="game-buttons">
+        <button onclick="hit()">Hit</button>
+        <button onclick="stand()">Stand</button>
+    </div>
+</div>
+
+<div class="bet-interface">
+    <p>Bet value </p> 
+    <p><input type="number" id="betCount"></p>
+    
+    <p><button id="sendButton" onclick="bet()">Bet</button></p>
+</div>
+
+<button id="ok-button" onclick="showBet()">OK</button>

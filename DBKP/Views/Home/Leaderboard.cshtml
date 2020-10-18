@@ -1,0 +1,25 @@
+@model IEnumerable<DBKP.Models.UserModel>
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2>Leaderboard</h2>
+
+<table class="LeaderBoardTable">
+    <tr>
+        @* <td>№</td> *@
+        <td>Name</td>
+        <td>Score</td>
+    </tr>
+    
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Login</td>
+            @* <td>@item.Score</td> *@
+        </tr>
+    }
+</table>
+

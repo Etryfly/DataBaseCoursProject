@@ -1,0 +1,32 @@
+@page
+@model DBKP.Models.UserModel
+@{
+    Layout = "_Layout";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<div>
+    @Html.ValidationMessageFor(m => m.Login)
+    <form asp-action="Loginin">
+        <p>Login</p>
+        <p>
+            <input name="Login">
+        </p>
+        <p>Password</p>
+        <p>
+            <input type="password" name="Password">
+        </p>
+        <p>
+            <input type="submit">
+        </p>
+
+    </form>
+</div>
+</body>
+</html>

@@ -5,14 +5,15 @@
     <e p="$USER_HOME$/.cache/JetBrains/Rider2020.2/resharper-host/local/Transient/Rider/v202/SolutionCaches/_DB KP.-999399067.00" t="ExcludeRecursive" />
     <e p="$APPLICATION_CONFIG_DIR$/consoles/db" t="IncludeRecursive" />
     <e p="$PROJECT_DIR$" t="IncludeFlat">
-      <e p="DB KP" t="IncludeRecursive">
+      <e p="DB KP.sln" t="IncludeFlat" />
+      <e p="DBKP" t="IncludeRecursive">
         <e p="Controllers" t="Include">
           <e p="AuthenticationController.cs" t="Include" />
           <e p="BlackJackController.cs" t="Include" />
           <e p="HomeController.cs" t="Include" />
         </e>
-        <e p="DB KP.csproj" t="IncludeRecursive" />
         <e p="DBKP.PublishSettings" t="Include" />
+        <e p="DBKP.csproj" t="IncludeRecursive" />
         <e p="DBLog.txt" t="Include" />
         <e p="DBLoggerProvider.cs" t="Include" />
         <e p="Models" t="Include">
@@ -64,8 +65,8 @@
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.1" t="Include">
-              <e p="DB KP.AssemblyInfo.cs" t="Include" />
-              <e p="DB KP.RazorAssemblyInfo.cs" t="Include" />
+              <e p="DBKP.AssemblyInfo.cs" t="Include" />
+              <e p="DBKP.RazorAssemblyInfo.cs" t="Include" />
             </e>
           </e>
         </e>
@@ -132,7 +133,6 @@
           </e>
         </e>
       </e>
-      <e p="DB KP.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />
     </e>
   </component>

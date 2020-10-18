@@ -32,10 +32,82 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c6441d9c-13b7-4a81-9d5f-5adeda0ad1bb" name="Default Changelist" comment="Fixed bug: dealer score == user score">
+    <list default="true" id="c6441d9c-13b7-4a81-9d5f-5adeda0ad1bb" name="Default Changelist" comment="Trying to deploy to asure">
+      <change afterPath="$PROJECT_DIR$/DBKP/Views/_ViewImports.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DB KP/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DB KP/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DB KP/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DB KP/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB KP/Views/BlackJack/BlackJack.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/DB KP/Views/BlackJack/BlackJack.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB KP/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/DB KP/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP.sln" beforeDir="false" afterPath="$PROJECT_DIR$/DB KP.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/Controllers/AuthenticationController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/Controllers/AuthenticationController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/Controllers/BlackJackController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/Controllers/BlackJackController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/Controllers/HomeController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/DB KP.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/DBKP.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/DBKP.PublishSettings" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/DBKP.PublishSettings" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/DBLog.txt" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/DBLog.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/DBLoggerProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/DBLoggerProvider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/Models/AchievementsModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/Models/AchievementsModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/Models/ApplicationContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/Models/ApplicationContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/Models/Cards/BetsModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/Models/Cards/BetsModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/Models/Cards/CardModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/Models/Cards/CardModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/Models/Cards/HandCardModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/Models/Cards/HandCardModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/Models/ErrorViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/Models/ErrorViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/Models/GameStatsModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/Models/GameStatsModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/Models/HandModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/Models/HandModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/Models/MoneyModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/Models/MoneyModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/Models/UserModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/Models/UserModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/Views/Authentication/Loginin.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/Views/Authentication/Loginin.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/Views/Authentication/Register.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/Views/Authentication/Register.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/Views/Authentication/Register.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/Views/Authentication/Register.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/Views/Authentication/SuccessRegister.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/Views/Authentication/SuccessRegister.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/Views/Authentication/SuccessRegister.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/Views/Authentication/SuccessRegister.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/Views/BlackJack/BlackJack.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/Views/BlackJack/BlackJack.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/Views/Home/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/Views/Home/Leaderboard.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/Views/Home/Leaderboard.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/Views/Shared/Error.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/Views/Shared/Error.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/Views/Shared/_Layout.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/Views/Shared/_ValidationScriptsPartial.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/Views/Shared/_ValidationScriptsPartial.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/Views/_ViewImports.cshtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/Views/_ViewStart.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/Views/_ViewStart.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/appsettings.Development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/wwwroot/css/site.css" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/wwwroot/css/site.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/wwwroot/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/wwwroot/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/wwwroot/js/site.js" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/wwwroot/js/site.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/wwwroot/lib/bootstrap/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/wwwroot/lib/bootstrap/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/wwwroot/lib/bootstrap/dist/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/wwwroot/lib/bootstrap/dist/css/bootstrap.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/wwwroot/lib/bootstrap/dist/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/wwwroot/lib/bootstrap/dist/js/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/wwwroot/lib/jquery-validation/LICENSE.md" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/wwwroot/lib/jquery-validation/LICENSE.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/wwwroot/lib/jquery-validation/dist/additional-methods.js" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/wwwroot/lib/jquery-validation/dist/additional-methods.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/wwwroot/lib/jquery-validation/dist/additional-methods.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/wwwroot/lib/jquery-validation/dist/additional-methods.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/wwwroot/lib/jquery-validation/dist/jquery.validate.js" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/wwwroot/lib/jquery-validation/dist/jquery.validate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/wwwroot/lib/jquery/LICENSE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/wwwroot/lib/jquery/LICENSE.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/wwwroot/lib/jquery/dist/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/wwwroot/lib/jquery/dist/jquery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/wwwroot/lib/jquery/dist/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/wwwroot/lib/jquery/dist/jquery.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB KP/wwwroot/lib/jquery/dist/jquery.min.map" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/wwwroot/lib/jquery/dist/jquery.min.map" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +126,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/C072ADA3-420F-4E08-8493-043C3240EB59/24/ControllerBase.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DBKP/obj/Debug/netcoreapp3.1/Razor/Views/Authentication/Loginin.cshtml.g.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/0ED64369-B9E5-46BD-901E-20FAF89A4945/3/AuthorizationMiddleware.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/A23E70F6-03E3-4C94-80B8-7ACD180A736C/13/DeveloperExceptionPageExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/EC3D5B60-D3AF-4B3E-97DB-FB39159D1EAF/a3/08c1a16f/Activity.cs" root0="SKIP_HIGHLIGHTING" />
@@ -70,7 +143,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/DB KP/Models/LeaderboardModel.cs" />
         <option value="$PROJECT_DIR$/DB KP/Views/Home/Index.cshtml" />
         <option value="$PROJECT_DIR$/DB KP/Program.cs" />
         <option value="$PROJECT_DIR$/DB KP/Views/Home/BlackJack.cshtml" />
@@ -121,6 +193,7 @@
         <option value="$PROJECT_DIR$/DB KP/appsettings.Development.json" />
         <option value="$PROJECT_DIR$/DB KP/Controllers/BlackJackController.cs" />
         <option value="$PROJECT_DIR$/DB KP/Views/BlackJack/BlackJack.cshtml" />
+        <option value="$PROJECT_DIR$/DBKP/Startup.cs" />
       </list>
     </option>
   </component>
@@ -155,22 +228,22 @@
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Azurite" />
   </component>
   <component name="RunManager" selected=".NET Launch Settings Profile.DB KP: DB_KP">
-    <configuration name="DBKPAzure" type="AzureDotNetWebAppPublish" factoryName="Azure Web App">
-      <option name="AZURE_WEB_APP_PROJECT" value="$PROJECT_DIR$/DB KP/DB KP.csproj" />
+    <configuration name="Test" type="AzureDotNetWebAppPublish" factoryName="Azure Web App">
+      <option name="AZURE_WEB_APP_PROJECT" value="$PROJECT_DIR$/DBKP/DBKP.csproj" />
       <option name="AZURE_WEB_APP_SUBSCRIPTION_ID" value="5bfc5763-33e6-4fdb-bfb2-69ad68e7691d" />
-      <option name="AZURE_WEB_APP_IS_CREATE_APP" value="0" />
-      <option name="AZURE_WEB_APP_ID" value="/subscriptions/5bfc5763-33e6-4fdb-bfb2-69ad68e7691d/resourceGroups/cloud-shell-storage-westeurope/providers/Microsoft.Web/sites/DBKP" />
-      <option name="AZURE_WEB_APP_NAME" value="webapp-201014221857" />
-      <option name="AZURE_WEB_APP_IS_CREATE_RESOURCE_GROUP" value="0" />
-      <option name="AZURE_WEB_APP_RESOURCE_GROUP_NAME" value="cloud-shell-storage-westeurope" />
-      <option name="AZURE_WEB_APP_OPERATING_SYSTEM" value="LINUX" />
-      <option name="AZURE_WEB_APP_IS_CREATE_APP_SERVICE_PLAN" value="0" />
-      <option name="AZURE_WEB_APP_SERVICE_PLAN_ID" value="/subscriptions/5bfc5763-33e6-4fdb-bfb2-69ad68e7691d/resourceGroups/cloud-shell-storage-westeurope/providers/Microsoft.Web/serverfarms/appsp-201014212656" />
-      <option name="AZURE_WEB_APP_SERVICE_PLAN_NAME" value="appsp-201014221857" />
+      <option name="AZURE_WEB_APP_IS_CREATE_APP" value="1" />
+      <option name="AZURE_WEB_APP_ID" value="" />
+      <option name="AZURE_WEB_APP_NAME" value="TestAzure123123123" />
+      <option name="AZURE_WEB_APP_IS_CREATE_RESOURCE_GROUP" value="1" />
+      <option name="AZURE_WEB_APP_RESOURCE_GROUP_NAME" value="Test" />
+      <option name="AZURE_WEB_APP_OPERATING_SYSTEM" value="WINDOWS" />
+      <option name="AZURE_WEB_APP_IS_CREATE_APP_SERVICE_PLAN" value="1" />
+      <option name="AZURE_WEB_APP_SERVICE_PLAN_ID" value="" />
+      <option name="AZURE_WEB_APP_SERVICE_PLAN_NAME" value="appsp-201015142247" />
       <option name="AZURE_WEB_APP_LOCATION" value="eastus" />
       <option name="AZURE_WEB_APP_PRICING_TIER" value="B1" />
       <option name="AZURE_WEB_APP_NET_FRAMEWORK" value="4.7" />
-      <option name="AZURE_WEB_APP_NET_CORE_RUNTIME" value="DOTNETCORE 3.1" />
+      <option name="AZURE_WEB_APP_NET_CORE_RUNTIME" value="DOTNETCORE 2.1" />
       <option name="AZURE_SQL_DATABASE_SUBSCRIPTION_ID" value="5bfc5763-33e6-4fdb-bfb2-69ad68e7691d" />
       <option name="AZURE_SQL_DATABASE_IS_ENABLED" value="0" />
       <option name="AZURE_SQL_DATABASE_CONNECTION_STRING_NAME" value="" />
@@ -188,7 +261,7 @@
       <method v="2" />
     </configuration>
     <configuration name="DB KP: DB_KP" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
-      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/DB KP/DB KP.csproj" />
+      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/DBKP/DBKP.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value=".NETCoreApp,Version=v3.1" />
       <option name="LAUNCH_PROFILE_NAME" value="DB_KP" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
@@ -203,7 +276,7 @@
       </method>
     </configuration>
     <configuration name="DB KP: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
-      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/DB KP/DB KP.csproj" />
+      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/DBKP/DBKP.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value=".NETCoreApp,Version=v3.1" />
       <option name="LAUNCH_PROFILE_NAME" value="IIS Express" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
@@ -220,7 +293,7 @@
     <list>
       <item itemvalue=".NET Launch Settings Profile.DB KP: DB_KP" />
       <item itemvalue=".NET Launch Settings Profile.DB KP: IIS Express" />
-      <item itemvalue="Azure - Publish Web App.DBKPAzure" />
+      <item itemvalue="Azure - Publish Web App.Test" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -244,7 +317,8 @@
       <workItem from="1602439673819" duration="2305000" />
       <workItem from="1602485315464" duration="17665000" />
       <workItem from="1602686522445" duration="5437000" />
-      <workItem from="1602699206526" duration="5435000" />
+      <workItem from="1602699206526" duration="7621000" />
+      <workItem from="1602760390685" duration="1374000" />
     </task>
     <task id="LOCAL-00001" summary="Register feature">
       <created>1600591224271</created>
@@ -295,7 +369,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602518219294</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Trying to deploy to asure">
+      <created>1602757516862</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1602757516862</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -336,17 +417,22 @@
     <MESSAGE value="Backend prepared to stand feature" />
     <MESSAGE value="Almost done. TODO debug hit and stand" />
     <MESSAGE value="Fixed bug: dealer score == user score" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed bug: dealer score == user score" />
+    <MESSAGE value="Trying to deploy to asure" />
+    <option name="LAST_COMMIT_MESSAGE" value="Trying to deploy to asure" />
   </component>
   <component name="WindowStateProjectService">
     <state x="425" y="192" width="505" height="418" key="#TODO" timestamp="1600598568333">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="425" y="192" width="505" height="418" key="#TODO/0.27.1366.741@0.27.1366.741" timestamp="1600598568333" />
-    <state x="278" y="27" width="1046" height="741" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602743131358">
+    <state x="278" y="27" width="1046" height="741" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602783287846">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="278" y="27" width="1046" height="741" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1366.741@0.27.1366.741" timestamp="1602743131358" />
+    <state x="278" y="27" width="1046" height="741" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1366.741@0.27.1366.741" timestamp="1602783287846" />
+    <state x="344" y="198" width="667" height="406" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1602758543344">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="344" y="198" width="667" height="406" key="#com.intellij.fileTypes.FileTypeChooser/0.27.1366.741@0.27.1366.741" timestamp="1602758543344" />
     <state width="433" height="497" key="DebuggerActiveHint" timestamp="1602058691324">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
@@ -359,22 +445,22 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="546" y="297" width="273" height="207" key="Github.ShareDialog/0.27.1366.741@0.27.1366.741" timestamp="1600591282793" />
-    <state width="1320" height="140" key="GridCell.Tab.0.bottom" timestamp="1602742874313">
+    <state width="1320" height="140" key="GridCell.Tab.0.bottom" timestamp="1602783330251">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="140" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1602742874313" />
-    <state width="1320" height="140" key="GridCell.Tab.0.center" timestamp="1602742874310">
+    <state width="1320" height="140" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1602783330251" />
+    <state width="1320" height="140" key="GridCell.Tab.0.center" timestamp="1602783330250">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="140" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1602742874310" />
-    <state width="1320" height="140" key="GridCell.Tab.0.left" timestamp="1602742874309">
+    <state width="1320" height="140" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1602783330250" />
+    <state width="1320" height="140" key="GridCell.Tab.0.left" timestamp="1602783330249">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="140" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1602742874309" />
-    <state width="1320" height="140" key="GridCell.Tab.0.right" timestamp="1602742874312">
+    <state width="1320" height="140" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1602783330249" />
+    <state width="1320" height="140" key="GridCell.Tab.0.right" timestamp="1602783330251">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="140" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1602742874312" />
+    <state width="1320" height="140" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1602783330251" />
     <state width="1320" height="235" key="GridCell.Tab.1.bottom" timestamp="1602522895878">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
@@ -463,10 +549,10 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="100" y="127" width="1166" height="541" key="VCS.FileHistoryDialog/0.27.1366.741@0.27.1366.741" timestamp="1600669290630" />
-    <state x="278" y="119" width="800" height="564" key="Vcs.Push.Dialog.v2" timestamp="1602518222883">
+    <state x="278" y="119" width="800" height="564" key="Vcs.Push.Dialog.v2" timestamp="1602757558075">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="278" y="119" width="800" height="564" key="Vcs.Push.Dialog.v2/0.27.1366.741@0.27.1366.741" timestamp="1602518222883" />
+    <state x="278" y="119" width="800" height="564" key="Vcs.Push.Dialog.v2/0.27.1366.741@0.27.1366.741" timestamp="1602757558075" />
     <state x="347" y="174" key="run.anything.popup" timestamp="1600972960843">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
@@ -480,27 +566,27 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/DB KP/Controllers/AuthenticationController.cs</url>
+          <url>file://$PROJECT_DIR$/DBKP/Controllers/AuthenticationController.cs</url>
           <line>41</line>
           <properties documentPath="$PROJECT_DIR$/DB KP/Controllers/AuthenticationController.cs" initialLine="41">
             <startOffsets>
-              <option value="1155" />
+              <option value="1153" />
             </startOffsets>
             <endOffsets>
-              <option value="1214" />
+              <option value="1212" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/DB KP/Controllers/BlackJackController.cs</url>
+          <url>file://$PROJECT_DIR$/DBKP/Controllers/BlackJackController.cs</url>
           <line>219</line>
           <properties documentPath="$PROJECT_DIR$/DB KP/Controllers/BlackJackController.cs" initialLine="212">
             <startOffsets>
-              <option value="6893" />
+              <option value="6891" />
             </startOffsets>
             <endOffsets>
-              <option value="6942" />
+              <option value="6940" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="9" />
