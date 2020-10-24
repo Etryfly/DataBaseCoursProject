@@ -19,9 +19,9 @@ namespace DBKP.Controllers
     {
         private ApplicationContext db;
 
-        private readonly ILogger<HomeController> _logger;
+        private readonly ILogger<AuthenticationController> _logger;
 
-        public AuthenticationController(ILogger<HomeController> logger, ApplicationContext context)
+        public AuthenticationController(ILogger<AuthenticationController> logger, ApplicationContext context)
         {
             _logger = logger;
             db = context;
@@ -114,7 +114,6 @@ namespace DBKP.Controllers
             
             UserModel user = new UserModel();
             MoneyModel money = new MoneyModel();
-            money.Chips = 100;
             user.Money = money;
             
             
@@ -125,6 +124,8 @@ namespace DBKP.Controllers
                                    user.Password);
         
             db.Money.Add(money);
+            db.SaveChanges();
+            user.Id = money.Id;
             _logger.LogInformation(db.SaveChanges().ToString());
             
             user.GameStats = new GameStatsModel(){chips_earned = 0, Loses = 0, Wins = 0, Id = money.Id};
@@ -137,6 +138,8 @@ namespace DBKP.Controllers
             TempData["login"] = user.Login;
             return RedirectToAction("SuccessRegister");
         }
+        
+        
 
         public IActionResult SuccessRegister()
         {

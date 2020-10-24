@@ -169,6 +169,22 @@ namespace DBKP.Controllers
             db.SaveChanges();
         }
 
+        private void UserLoseIntoGameStatTable(int userId, decimal bet)
+        {
+            GameStatsModel gameStatsModel = db.GameStats.FirstOrDefault(g => g.Id == userId);
+            gameStatsModel.chips_loosed += bet;
+            gameStatsModel.Loses += 1;
+            db.SaveChanges();
+        }
+        
+        private void UserWinIntoGameStatTable(int userId, decimal bet)
+        {
+            GameStatsModel gameStatsModel = db.GameStats.FirstOrDefault(g => g.Id == userId);
+            gameStatsModel.chips_earned += 2*bet;
+            gameStatsModel.Wins += 1;
+            db.SaveChanges();
+        }
+
         public JsonResult Stand()
         {
             const int USER_HAND_TYPE = 1;
@@ -218,11 +234,12 @@ namespace DBKP.Controllers
             BetsModel betModel = db.Bets.FirstOrDefault(b => b.UserId == userModel.Id);
             decimal bet = betModel.Bet;
             db.Remove(betModel);
-           
+            // GameStatsModel gameStatsModel = db.GameStats.FirstOrDefault(s => s.Id == userModel.Id);
             MoneyModel moneyModel = db.Money.FirstOrDefault(u => u.Id == userModel.Id);
             if (userScore > computerScore && userScore <= 21)
             {
                 moneyModel.Chips += bet * 2;
+                UserWinIntoGameStatTable(userModel.Id, bet);
                 db.SaveChanges();
                 _logger.LogDebug(string.Format("Stand: user win. User score - {0}, computer score - {1}", userScore, computerScore) );
                 return Json(new
@@ -238,6 +255,7 @@ namespace DBKP.Controllers
             if (computerScore > userScore && computerScore <= 21)
             {
                 _logger.LogDebug(string.Format("Stand: user lose. User score - {0}, computer score - {1}", userScore, computerScore) );
+                UserLoseIntoGameStatTable(userModel.Id, bet);
                 return Json(new
                 {
                     ComputerCards = computerCards,
@@ -252,6 +270,7 @@ namespace DBKP.Controllers
             {
                 moneyModel.Chips += bet * 2;
                 db.SaveChanges();
+                UserWinIntoGameStatTable(userModel.Id, bet);
                 _logger.LogDebug(string.Format("Stand: user win (computer score > 21). User score - {0}, computer score - {1}", userScore, computerScore) );
                 return Json(new
                 {
@@ -266,6 +285,7 @@ namespace DBKP.Controllers
             if (userScore > 21)
             {
                 _logger.LogDebug(string.Format("Stand: user lose (user score > 21). User score - {0}, computer score - {1}", userScore, computerScore) );
+                UserLoseIntoGameStatTable(userModel.Id, bet);
                 return Json(new
                 {
                     ComputerCards = computerCards,
@@ -278,6 +298,7 @@ namespace DBKP.Controllers
 
             if (userScore == computerScore)
             {
+                UserWinIntoGameStatTable(userModel.Id, bet);
                 _logger.LogDebug(string.Format("Stand: user win (user score == computer score). User score - {0}, computer score - {1}", userScore, computerScore) );
                 return Json(new
                 {
@@ -303,6 +324,7 @@ namespace DBKP.Controllers
         [HttpPost]
         public JsonResult Bet(int count)
         {
+            //TODO add transaction log in db (user, (bet, win, lose), amount, date_time)
             const bool NOT_ENOUGH_CHIPS = false;
             const bool OK = true;
             const int USER_HAND_TYPE = 1;
@@ -401,6 +423,8 @@ namespace DBKP.Controllers
                 ClearHandsByHand(hands[0]);
                 ClearHandsByHand(hands[1]);
                 BetsModel betModel = db.Bets.FirstOrDefault(b => b.UserId == userModel.Id);
+                UserLoseIntoGameStatTable(userModel.Id, betModel.Bet);
+                db.GameStats.FirstOrDefault(u => u.Id == userModel.Id).chips_loosed += betModel.Bet;
                 db.Remove(betModel);
                 return Json(new
                 {

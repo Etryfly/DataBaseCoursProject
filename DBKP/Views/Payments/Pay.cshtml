@@ -1,0 +1,28 @@
+@page
+@{
+    Layout = "_Layout";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Pay</title>
+</head>
+<body>
+@* @Html.ValidationMessageFor(m => m.Chips) *@
+<div class="message-field">@ViewBag.message</div>
+<form asp-action="Pay">
+    
+    <img src="../img/card.png" width="400px"></img>
+    <p>Count of chips</p>
+    <p>
+        <input name="value">
+    </p>
+    <p>
+        <input type="submit">
+    </p>
+
+</form>
+</body>
+</html>

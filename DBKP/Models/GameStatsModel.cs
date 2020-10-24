@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DBKP.Models
 {
@@ -8,6 +9,11 @@ namespace DBKP.Models
         public int Id { set; get; }
         public int Loses { set; get; }
         public int Wins { set; get; }
-        public int chips_earned { set; get; }
+        [Column(TypeName="money")]
+        public decimal chips_earned { set; get; }
+        [Column(TypeName="money")]
+        public decimal chips_loosed { set; get; }
+        [Column(TypeName="money")]
+        public decimal payed { get; set; }
     }
 }

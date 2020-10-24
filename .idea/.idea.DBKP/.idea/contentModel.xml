@@ -8,10 +8,12 @@
       <e p=".git/info/exclude" t="IncludeRecursive" />
       <e p="DBKP" t="IncludeRecursive">
         <e p=".gitignore" t="Include" />
+        <e p=".~lock.DBLog.txt#" t="Include" />
         <e p="Controllers" t="Include">
           <e p="AuthenticationController.cs" t="Include" />
           <e p="BlackJackController.cs" t="Include" />
           <e p="HomeController.cs" t="Include" />
+          <e p="PaymentsController.cs" t="Include" />
         </e>
         <e p="DBKP.PublishSettings" t="Include" />
         <e p="DBKP.csproj" t="IncludeRecursive" />
@@ -52,6 +54,10 @@
             <e p="Index.cshtml" t="Include" />
             <e p="Leaderboard.cshtml" t="Include" />
           </e>
+          <e p="Payments" t="Include">
+            <e p="Pay.cshtml" t="Include" />
+            <e p="Pay.cshtml.cs" t="Include" />
+          </e>
           <e p="Shared" t="Include">
             <e p="Error.cshtml" t="Include" />
             <e p="_Layout.cshtml" t="Include" />
@@ -59,6 +65,9 @@
           </e>
           <e p="_ViewImports.cshtml" t="Include" />
           <e p="_ViewStart.cshtml" t="Include" />
+        </e>
+        <e p="admin" t="Include">
+          <e p="AdminController.cs" t="Include" />
         </e>
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
@@ -76,6 +85,9 @@
             <e p="site.css" t="Include" />
           </e>
           <e p="favicon.ico" t="Include" />
+          <e p="img" t="Include">
+            <e p="card.png" t="Include" />
+          </e>
           <e p="js" t="Include">
             <e p="site.js" t="Include" />
           </e>
