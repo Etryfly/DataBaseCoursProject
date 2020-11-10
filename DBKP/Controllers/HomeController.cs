@@ -35,8 +35,7 @@ namespace DBKP.Controllers
 
         public async Task<IActionResult> Leaderboard()
         {
-            // _logger.LogInformation(db.Users.ToListAsync().Result[0].Name);
-            return View(await db.Users.ToListAsync());
+            return View(await db.Leaderboard.OrderByDescending(u => u.Chips).ToListAsync());
         }
 
        

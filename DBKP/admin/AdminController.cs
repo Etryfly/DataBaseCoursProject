@@ -3,6 +3,8 @@ using System.Linq;
 using DBKP.Controllers;
 using DBKP.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
 namespace DBKP.admin
@@ -99,5 +101,27 @@ namespace DBKP.admin
             });
             
         }
+
+        public JsonResult addChipsToUser(string login, string passwordHash, int userId, decimal chips)
+        {
+            UserModel user = db.Users.FirstOrDefault(u => u.Login == login && u.Password == passwordHash);
+            if (user == null)
+            {
+                return Json(new
+                {
+                    status = ReturnCode.InvalidLogin
+                });
+            }
+            
+            SqlParameter userIdParameter = new SqlParameter("@UserId", userId);
+            SqlParameter chipsParameter = new SqlParameter("@ChipsAmount", chips);
+            db.Database.ExecuteSqlRaw("addChipsToUser @UserId @ChipsAmount", 
+                userIdParameter, chipsParameter);
+             return Json(new
+            {
+                status = ReturnCode.OK
+            });
+        }
+        
     }
 }

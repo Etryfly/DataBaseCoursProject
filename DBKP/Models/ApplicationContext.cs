@@ -15,7 +15,17 @@ namespace DBKP.Models
         public DbSet<CardModel> Card { get; set; }
         public DbSet<HandModel> Hand { get; set; }
         public DbSet<HandCardModel> HandCard { get; set; }
+        
+        public DbSet<LeaderboardModel> Leaderboard { set; get; }
                 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<LeaderboardModel>((pc =>
+            {
+                pc.HasNoKey();
+                pc.ToView("Leaderboard");
+            }));
+        }
         public ApplicationContext(DbContextOptions<ApplicationContext> options) : base(options)
         {
             Database.EnsureCreated();

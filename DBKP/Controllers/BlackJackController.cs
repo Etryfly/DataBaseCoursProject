@@ -156,7 +156,7 @@ namespace DBKP.Controllers
             error = 4
         }
 
-        private void ClearHandsByHand(HandModel handModel)
+        private void ClearHandCardsByHand(HandModel handModel)
         {
             foreach (var handCard in db.HandCard.Where(h => h.HandId == handModel.hand_id))
             {
@@ -228,7 +228,7 @@ namespace DBKP.Controllers
                     userScore = CountScore(GetAllCardsByHandModel(hand));
                 }
 
-                ClearHandsByHand(hand);
+                ClearHandCardsByHand(hand);
             }
 
             BetsModel betModel = db.Bets.FirstOrDefault(b => b.UserId == userModel.Id);
@@ -340,15 +340,22 @@ namespace DBKP.Controllers
                 moneyModel.Chips -= count;
                 status = OK;
                 BetsModel betsModel = db.Bets.FirstOrDefault(b => b.UserId == userModel.Id);
-                if (betsModel == null)
+                if (betsModel != null)
                 {
-                    betsModel = new BetsModel() {Bet = count, UserId = userModel.Id};
-                    db.Bets.Add(betsModel);
+                    List<HandModel> hands = GetHandsForUserWithId(userModel.Id);
+                    foreach (HandModel hand in hands)
+                    {
+                        ClearHandCardsByHand(hand);
+                    }
+                    db.Bets.Remove((betsModel));
+                   
                 }
-                else
-                {
-                    betsModel.Bet += count;
-                }
+                betsModel = new BetsModel() {Bet = count, UserId = userModel.Id};
+                db.Bets.Add(betsModel);
+                // else
+                // {
+                //     betsModel.Bet += count;
+                // }
 
                 db.SaveChanges();
             }
@@ -420,8 +427,8 @@ namespace DBKP.Controllers
             if (userScore > 21)
             {
                 _logger.LogDebug(string.Format("Hit: user lose. User score - {0}", userScore) );
-                ClearHandsByHand(hands[0]);
-                ClearHandsByHand(hands[1]);
+                ClearHandCardsByHand(hands[0]);
+                ClearHandCardsByHand(hands[1]);
                 BetsModel betModel = db.Bets.FirstOrDefault(b => b.UserId == userModel.Id);
                 UserLoseIntoGameStatTable(userModel.Id, betModel.Bet);
                 db.GameStats.FirstOrDefault(u => u.Id == userModel.Id).chips_loosed += betModel.Bet;

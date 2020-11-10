@@ -30,6 +30,7 @@
           <e p="ErrorViewModel.cs" t="Include" />
           <e p="GameStatsModel.cs" t="Include" />
           <e p="HandModel.cs" t="Include" />
+          <e p="LeaderboardModel.cs" t="Include" />
           <e p="MoneyModel.cs" t="Include" />
           <e p="UserModel.cs" t="Include" />
         </e>

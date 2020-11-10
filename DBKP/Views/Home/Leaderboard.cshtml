@@ -1,4 +1,4 @@
-@model IEnumerable<DBKP.Models.UserModel>
+@model IEnumerable<DBKP.Models.LeaderboardModel>
 
 @{
     ViewBag.Title = "title";
@@ -18,7 +18,7 @@
     {
         <tr>
             <td>@item.Login</td>
-            @* <td>@item.Score</td> *@
+            <td>@item.Chips</td>
         </tr>
     }
 </table>
