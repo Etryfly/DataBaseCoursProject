@@ -20,7 +20,6 @@
         <e p="DBLog.txt" t="Include" />
         <e p="DBLoggerProvider.cs" t="Include" />
         <e p="Models" t="Include">
-          <e p="AchievementsModel.cs" t="Include" />
           <e p="ApplicationContext.cs" t="Include" />
           <e p="Cards" t="Include">
             <e p="BetsModel.cs" t="Include" />

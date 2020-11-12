@@ -10,7 +10,7 @@ namespace DBKP.Models
         public DbSet<UserModel> Users { get; set; }
         public DbSet<MoneyModel> Money { get; set; }
         public DbSet<GameStatsModel> GameStats { get; set; }
-        public DbSet<AchievementsModel> Achievement { get; set; }
+       
         public DbSet<BetsModel> Bets { get; set; }
         public DbSet<CardModel> Card { get; set; }
         public DbSet<HandModel> Hand { get; set; }
