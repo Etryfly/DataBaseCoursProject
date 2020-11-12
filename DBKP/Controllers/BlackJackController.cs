@@ -430,6 +430,7 @@ namespace DBKP.Controllers
                 ClearHandCardsByHand(hands[0]);
                 ClearHandCardsByHand(hands[1]);
                 BetsModel betModel = db.Bets.FirstOrDefault(b => b.UserId == userModel.Id);
+                decimal bet = betModel.Bet;
                 UserLoseIntoGameStatTable(userModel.Id, betModel.Bet);
                 db.GameStats.FirstOrDefault(u => u.Id == userModel.Id).chips_loosed += betModel.Bet;
                 db.Remove(betModel);
@@ -437,7 +438,9 @@ namespace DBKP.Controllers
                 {
                     state = gameState.userLose,
                     UserCards = userCards,
-                    UserScore = userScore
+                    UserScore = userScore,
+                    userBet = bet
+                    
                 });
             }
 
@@ -449,6 +452,16 @@ namespace DBKP.Controllers
             });
         }
 
+        public JsonResult GetChips()
+        {
+            UserModel user = db.Users.FirstOrDefault(u => u.Login == User.Identity.Name);
+            decimal money = db.Money.FirstOrDefault(m => m.Id == user.Id).Chips;
+            _logger.LogDebug(money.ToString());
+            return Json(new
+            {
+                chips = money
+            });
+        }
 
         public JsonResult Hit()
         {

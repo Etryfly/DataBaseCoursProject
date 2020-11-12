@@ -84,16 +84,38 @@ var bet = function ()
 
 };
 
+
+
 function afterGame(response) {
     $("#ok-button").show();
     $(".computer-score").show();
     $(".message-field").show();
     $(".game-buttons").hide();
+
+    $.ajax(
+        {
+            type: 'POST',
+            dataType: 'json',
+            url: "/BlackJack/GetChips",
+            success:
+                function (response)
+                {
+
+                    $("#user-chips").html(response.chips)
+
+                },
+            error: function(xhr, status, error) {
+                alert(error.message)
+            }
+        });
+  
     
-    if (response.state == gameStatus.userWin) $(".message-field").html("You win ", response.bet, " chips")
-    if (response.state == gameStatus.userLose) $(".message-field").html("You lose ", response.bet, " chips")
+    if (response.state == gameStatus.userWin) $(".message-field").html("You win " + response.userBet*2 + " chips")
+    if (response.state == gameStatus.userLose) $(".message-field").html("You lose " + response.userBet + " chips")
     
 }
+
+
 
 function stand()
 {

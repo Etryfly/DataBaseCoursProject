@@ -129,9 +129,10 @@ namespace DBKP.Controllers
             _logger.LogInformation(db.SaveChanges().ToString());
             
             user.GameStats = new GameStatsModel(){chips_earned = 0, Loses = 0, Wins = 0, Id = money.Id};
-            db.GameStats.Add(user.GameStats);
+            
             db.Users.Add(user);
-                
+            db.SaveChanges();
+            db.GameStats.Add(user.GameStats);
             db.SaveChanges();
            
             

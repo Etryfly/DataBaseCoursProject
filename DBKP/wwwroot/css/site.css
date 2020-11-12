@@ -99,3 +99,7 @@ body {
 #ok-button {
   display:none;
 }
+
+.navbar-collapse {
+  flex-basis: max-content;
+}
