@@ -11,6 +11,7 @@ namespace DBKP.Models
         public string Login { set; get; }
         public string Password { set; get; }
         
+        public int Role_id { set; get; }
         public MoneyModel Money;
         public GameStatsModel GameStats;
         public List<AchievementsModel> Achievements;

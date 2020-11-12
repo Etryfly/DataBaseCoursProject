@@ -54,7 +54,7 @@ namespace DBKP.admin
         public JsonResult getUsers(string login, string passwordHash)
         {
             
-            UserModel user = db.Users.FirstOrDefault(u => u.Login == login && u.Password == passwordHash);
+            UserModel user = db.Users.FirstOrDefault(u => u.Login == login && u.Password == passwordHash && u.Role_id == 1);
             if (user == null)
             {
                 return Json(new
@@ -82,7 +82,7 @@ namespace DBKP.admin
 
         public JsonResult getStatistics(string login, string passwordHash)
         {
-            UserModel user = db.Users.FirstOrDefault(u => u.Login == login && u.Password == passwordHash);
+            UserModel user = db.Users.FirstOrDefault(u => u.Login == login && u.Password == passwordHash && u.Role_id == 1);
             if (user == null)
             {
                 return Json(new
@@ -102,9 +102,9 @@ namespace DBKP.admin
             
         }
 
-        public JsonResult addChipsToUser(string login, string passwordHash, int userId, decimal chips)
+        public JsonResult addChipsToUser(string login, string passwordHash, int userId, int chips)
         {
-            UserModel user = db.Users.FirstOrDefault(u => u.Login == login && u.Password == passwordHash);
+            UserModel user = db.Users.FirstOrDefault(u => u.Login == login && u.Password == passwordHash && u.Role_id == 1);
             if (user == null)
             {
                 return Json(new
@@ -115,12 +115,30 @@ namespace DBKP.admin
             
             SqlParameter userIdParameter = new SqlParameter("@UserId", userId);
             SqlParameter chipsParameter = new SqlParameter("@ChipsAmount", chips);
-            db.Database.ExecuteSqlRaw("addChipsToUser @UserId @ChipsAmount", 
+            db.Database.ExecuteSqlRaw("addChipsToUser @UserId, @ChipsAmount", 
                 userIdParameter, chipsParameter);
              return Json(new
             {
                 status = ReturnCode.OK
             });
+        }
+        
+        public JsonResult isAdmin(string login, string passwordHash)
+        {
+            UserModel user = db.Users.FirstOrDefault(u => u.Login == login && u.Password == passwordHash && u.Role_id == 1);
+
+            if (user == null)
+            {
+                return Json(new
+                {
+                    status = ReturnCode.InvalidLogin
+                });
+            }
+            return Json(new
+            {
+                status = ReturnCode.OK
+            });
+            
         }
         
     }
