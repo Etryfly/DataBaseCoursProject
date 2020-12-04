@@ -5,6 +5,7 @@ using System.Linq;
 using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using DBKP.Models;
 using Microsoft.AspNetCore.Authentication;
@@ -103,12 +104,26 @@ namespace DBKP.Controllers
         [AllowAnonymous]
         public IActionResult Register(UserModel model, string returnUrl)
         {
+            
+            if (model.Login == null ||
+                model.Password == null ||
+                Regex.Matches(model.Login,@"[a-zA-Z0-9]").Count == 0 || 
+                Regex.Matches(model.Password,@"[a-zA-Z0-9]").Count == 0
+                )
+            {
+                ModelState.AddModelError("Login", "Invalid login or password");
+                return View(model);
+                
+            }
+            
             if (db.Users.FirstOrDefault(u => u.Login == model.Login)!=null)
             {
                 ModelState.AddModelError("Login", "Login already claimed");
                 return View(model);
                 
             }
+            
+           
 
             string salt = model.Login;
             

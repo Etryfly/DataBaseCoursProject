@@ -324,7 +324,6 @@ namespace DBKP.Controllers
         [HttpPost]
         public JsonResult Bet(int count)
         {
-            //TODO add transaction log in db (user, (bet, win, lose), amount, date_time)
             const bool NOT_ENOUGH_CHIPS = false;
             const bool OK = true;
             const int USER_HAND_TYPE = 1;
@@ -334,7 +333,12 @@ namespace DBKP.Controllers
             _logger.LogDebug("BlackJack - Bet -  count: " + count);
             // ViewBag.Count = count;
             bool status;
+            if (count > int.MaxValue)RedirectToAction("Error", "Home");
             if (moneyModel == null) RedirectToAction("Error", "Home");
+
+
+            List<CardModel> userCards = new List<CardModel>();
+            List<CardModel> computerCards = new List<CardModel>();
             if (moneyModel.Chips >= count && count > 0)
             {
                 moneyModel.Chips -= count;
@@ -352,23 +356,21 @@ namespace DBKP.Controllers
                 }
                 betsModel = new BetsModel() {Bet = count, UserId = userModel.Id};
                 db.Bets.Add(betsModel);
-                // else
-                // {
-                //     betsModel.Bet += count;
-                // }
-
+              
                 db.SaveChanges();
+                
+                
+                userCards = getNCardForUserWithId(2, userModel.Id);
+                setCardsForUserWithIdAndHandTypeId(userCards, userModel.Id, USER_HAND_TYPE);
+                computerCards = getNCardForUserWithId(1, userModel.Id);
+                setCardsForUserWithIdAndHandTypeId(computerCards, userModel.Id, COMPUTER_HAND_TYPE);
             }
             else
             {
                 status = NOT_ENOUGH_CHIPS;
             }
-
-
-            List<CardModel> userCards = getNCardForUserWithId(2, userModel.Id);
-            setCardsForUserWithIdAndHandTypeId(userCards, userModel.Id, USER_HAND_TYPE);
-            List<CardModel> computerCards = getNCardForUserWithId(1, userModel.Id);
-            setCardsForUserWithIdAndHandTypeId(computerCards, userModel.Id, COMPUTER_HAND_TYPE);
+            
+           
 
             int userScore = CountScore(userCards);
             int computerScore = CountScore(computerCards);

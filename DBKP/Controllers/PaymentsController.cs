@@ -17,9 +17,14 @@ namespace DBKP.Controllers
 
             this.db = db;
         }
-        // GET
+        
         public IActionResult Pay()
         {
+            if (!User.Identity.IsAuthenticated)
+            {
+                ModelState.AddModelError("Login", "Please, login in");
+                return RedirectToAction("Loginin", "Authentication");
+            }
             ViewBag.message = "Enter your card information and count of chips";
             return View();
         }

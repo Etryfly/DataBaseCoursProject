@@ -22,16 +22,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="11ea4707-34c2-428f-8c6b-385c58142bd3" name="Default Changelist" comment="Achievements removed">
+    <list default="true" id="11ea4707-34c2-428f-8c6b-385c58142bd3" name="Default Changelist" comment="Small fix">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DBKP/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DBKP/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DBKP/Controllers/AuthenticationController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/Controllers/AuthenticationController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DBKP/Controllers/BlackJackController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/Controllers/BlackJackController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBKP/Controllers/PaymentsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/Controllers/PaymentsController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DBKP/DBLog.txt" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/DBLog.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DBKP/Views/Authentication/Loginin.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/Views/Authentication/Loginin.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBKP/Views/Authentication/Register.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/Views/Authentication/Register.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBKP/Views/Home/Leaderboard.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/Views/Home/Leaderboard.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBKP/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/Views/Home/Index.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DBKP/wwwroot/css/site.css" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/wwwroot/css/site.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBKP/wwwroot/js/site.js" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/wwwroot/js/site.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +46,8 @@
     <setting file="file://$PROJECT_DIR$/DBKP/obj/Debug/netcoreapp3.1/Razor/Views/Authentication/Loginin.cshtml.g.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/DB6C1EE3-E8FA-4976-B69E-4AEE82E30549/C/Controller.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/F067C3E7-4920-4C75-A1BB-548028606476/F/RazorPageOfT.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/36B1B737-4846-4141-B5C2-5392950923F7/3/AuthenticationOptions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/36B1B737-4846-4141-B5C2-5392950923F7/2/AuthenticationHttpContextExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DBKP/appsettings.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/156090DF-4A5F-4E65-86B7-A215C990284E/C/DbContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/7F905FB9-BD10-4538-A48C-C2FD7549459A/9/RelationalDatabaseFacadeExtensions.cs" root0="SKIP_HIGHLIGHTING" />
@@ -63,7 +64,6 @@
         <option value="$PROJECT_DIR$/DBKP/Controllers/PayController.cs" />
         <option value="$PROJECT_DIR$/DBKP/Views/Payments/Pay.cshtml" />
         <option value="$PROJECT_DIR$/DBKP/Models/GameStatsModel.cs" />
-        <option value="$PROJECT_DIR$/DBKP/Controllers/PaymentsController.cs" />
         <option value="$PROJECT_DIR$/DBKP/LeaderboardViewConfiguration.cs" />
         <option value="$PROJECT_DIR$/DBKP/Models/LeaderboardModel.cs" />
         <option value="$PROJECT_DIR$/DBKP/Controllers/HomeController.cs" />
@@ -71,13 +71,15 @@
         <option value="$PROJECT_DIR$/DBKP/Models/ApplicationContext.cs" />
         <option value="$PROJECT_DIR$/DBKP/Models/UserModel.cs" />
         <option value="$PROJECT_DIR$/DBKP/Views/Shared/_Layout.cshtml" />
-        <option value="$PROJECT_DIR$/DBKP/wwwroot/css/site.css" />
         <option value="$PROJECT_DIR$/DBKP/Views/Authentication/Register.cshtml" />
-        <option value="$PROJECT_DIR$/DBKP/Views/Authentication/Loginin.cshtml" />
         <option value="$PROJECT_DIR$/DBKP/Views/Home/Leaderboard.cshtml" />
+        <option value="$PROJECT_DIR$/DBKP/wwwroot/js/site.js" />
+        <option value="$PROJECT_DIR$/DBKP/wwwroot/css/site.css" />
+        <option value="$PROJECT_DIR$/DBKP/Controllers/PaymentsController.cs" />
         <option value="$PROJECT_DIR$/DBKP/Controllers/AuthenticationController.cs" />
         <option value="$PROJECT_DIR$/DBKP/Controllers/BlackJackController.cs" />
-        <option value="$PROJECT_DIR$/DBKP/wwwroot/js/site.js" />
+        <option value="$PROJECT_DIR$/DBKP/Views/Home/Index.cshtml" />
+        <option value="$PROJECT_DIR$/DBKP/Views/Authentication/Loginin.cshtml" />
       </list>
     </option>
   </component>
@@ -117,7 +119,7 @@
       <option name="AZURE_WEB_APP_SERVICE_PLAN_ID" value="/subscriptions/5bfc5763-33e6-4fdb-bfb2-69ad68e7691d/resourceGroups/rg-201016183012/providers/Microsoft.Web/serverfarms/DBKPSP" />
       <option name="AZURE_WEB_APP_SERVICE_PLAN_NAME" value="" />
       <option name="AZURE_WEB_APP_LOCATION" value="eastus" />
-      <option name="AZURE_WEB_APP_PRICING_TIER" value="B1" />
+      <option name="AZURE_WEB_APP_PRICING_TIER" value="" />
       <option name="AZURE_WEB_APP_NET_FRAMEWORK" value="4.7" />
       <option name="AZURE_WEB_APP_NET_CORE_RUNTIME" value="DOTNETCORE 3.1" />
       <option name="AZURE_SQL_DATABASE_SUBSCRIPTION_ID" value="5bfc5763-33e6-4fdb-bfb2-69ad68e7691d" />
@@ -186,7 +188,8 @@
       <workItem from="1603283577099" duration="15199000" />
       <workItem from="1603520248620" duration="599000" />
       <workItem from="1603566955258" duration="979000" />
-      <workItem from="1604941664946" duration="35129000" />
+      <workItem from="1604941664946" duration="40827000" />
+      <workItem from="1605544895859" duration="2425000" />
     </task>
     <task id="LOCAL-00001" summary="Bet bug fix">
       <created>1603011969086</created>
@@ -230,7 +233,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605176927604</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Small fix">
+      <created>1605198102608</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1605198102608</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -257,33 +267,34 @@
     <MESSAGE value="DB view added" />
     <MESSAGE value="admin features" />
     <MESSAGE value="Achievements removed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Achievements removed" />
+    <MESSAGE value="Small fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Small fix" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="141" y="27" width="1084" height="741" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603173181676">
+    <state x="141" y="27" width="1084" height="741" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605544995383">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="141" y="27" width="1084" height="741" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1366.741@0.27.1366.741" timestamp="1603173181676" />
+    <state x="141" y="27" width="1084" height="741" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1366.741@0.27.1366.741" timestamp="1605544995383" />
     <state x="466" y="155" width="424" height="491" key="FileChooserDialogImpl" timestamp="1603011447625">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="466" y="155" width="424" height="491" key="FileChooserDialogImpl/0.27.1366.741@0.27.1366.741" timestamp="1603011447625" />
-    <state width="1320" height="116" key="GridCell.Tab.0.bottom" timestamp="1605197756248">
+    <state width="1320" height="116" key="GridCell.Tab.0.bottom" timestamp="1605550500837">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="116" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1605197756248" />
-    <state width="1320" height="116" key="GridCell.Tab.0.center" timestamp="1605197756247">
+    <state width="1320" height="116" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1605550500837" />
+    <state width="1320" height="116" key="GridCell.Tab.0.center" timestamp="1605550500824">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="116" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1605197756247" />
-    <state width="1320" height="116" key="GridCell.Tab.0.left" timestamp="1605197756245">
+    <state width="1320" height="116" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1605550500824" />
+    <state width="1320" height="116" key="GridCell.Tab.0.left" timestamp="1605550500822">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="116" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1605197756245" />
-    <state width="1320" height="116" key="GridCell.Tab.0.right" timestamp="1605197756247">
+    <state width="1320" height="116" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1605550500822" />
+    <state width="1320" height="116" key="GridCell.Tab.0.right" timestamp="1605550500832">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="116" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1605197756247" />
+    <state width="1320" height="116" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1605550500832" />
     <state width="1320" height="242" key="GridCell.Tab.1.bottom" timestamp="1603011501136">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
@@ -352,9 +363,9 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="172" y="31" width="1022" height="737" key="SettingsEditor/0.27.1366.741@0.27.1366.741" timestamp="1602860714901" />
-    <state x="278" y="133" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1605183823726">
+    <state x="278" y="133" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1605198104753">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="278" y="133" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.1366.741@0.27.1366.741" timestamp="1605183823726" />
+    <state x="278" y="133" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.1366.741@0.27.1366.741" timestamp="1605198104753" />
   </component>
 </project>
