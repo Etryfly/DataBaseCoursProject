@@ -2,8 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using DBKP.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
 namespace DBKP.Controllers
@@ -452,10 +454,11 @@ namespace DBKP.Controllers
             });
         }
 
-        public JsonResult GetChips()
+        public async Task<JsonResult> GetChips()
         {
-            UserModel user = db.Users.FirstOrDefault(u => u.Login == User.Identity.Name);
-            decimal money = db.Money.FirstOrDefault(m => m.Id == user.Id).Chips;
+            UserModel user = await db.Users.FirstOrDefaultAsync(u => u.Login == User.Identity.Name);
+            MoneyModel moneyModel = await db.Money.FirstOrDefaultAsync(m => m.Id == user.Id);
+            decimal money = moneyModel.Chips;
             _logger.LogDebug(money.ToString());
             return Json(new
             {

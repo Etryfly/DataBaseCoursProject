@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using DBKP.Controllers;
 using DBKP.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -32,10 +33,10 @@ namespace DBKP.admin
         
         [HttpGet]
         
-        public JsonResult getId(string login, string passwordHash)
+        public async Task<JsonResult> getId(string login, string passwordHash)
         {
             _logger.LogInformation("getId - Login: " + login + " password: " + passwordHash);
-            UserModel user = db.Users.FirstOrDefault(u => u.Login == login && u.Password == passwordHash);
+            UserModel user = await db.Users.FirstOrDefaultAsync(u => u.Login == login && u.Password == passwordHash);
             if (user == null)
             {
                 return Json(new
@@ -51,10 +52,10 @@ namespace DBKP.admin
             });
         }
         
-        public JsonResult getUsers(string login, string passwordHash)
+        public async Task<JsonResult> getUsers(string login, string passwordHash)
         {
             
-            UserModel user = db.Users.FirstOrDefault(u => u.Login == login && u.Password == passwordHash && u.Role_id == 1);
+            UserModel user = await db.Users.FirstOrDefaultAsync(u => u.Login == login && u.Password == passwordHash && u.Role_id == 1);
             if (user == null)
             {
                 return Json(new
@@ -80,9 +81,9 @@ namespace DBKP.admin
 
         }
 
-        public JsonResult getStatistics(string login, string passwordHash)
+        public async Task<JsonResult> getStatistics(string login, string passwordHash)
         {
-            UserModel user = db.Users.FirstOrDefault(u => u.Login == login && u.Password == passwordHash && u.Role_id == 1);
+            UserModel user = await db.Users.FirstOrDefaultAsync(u => u.Login == login && u.Password == passwordHash && u.Role_id == 1);
             if (user == null)
             {
                 return Json(new
@@ -91,8 +92,8 @@ namespace DBKP.admin
                 });
             }
            
-            decimal totalPayed = db.GameStats.Sum(g => g.payed);
-            decimal totalWinned = db.GameStats.Sum(g => g.chips_earned);
+            decimal totalPayed = await db.GameStats.SumAsync(g => g.payed);
+            decimal totalWinned = await db.GameStats.SumAsync(g => g.chips_earned);
             return Json(new
             {
                 status = ReturnCode.OK,
@@ -102,9 +103,9 @@ namespace DBKP.admin
             
         }
 
-        public JsonResult addChipsToUser(string login, string passwordHash, int userId, int chips)
+        public async Task<JsonResult> addChipsToUser(string login, string passwordHash, int userId, int chips)
         {
-            UserModel user = db.Users.FirstOrDefault(u => u.Login == login && u.Password == passwordHash && u.Role_id == 1);
+            UserModel user = await db.Users.FirstOrDefaultAsync(u => u.Login == login && u.Password == passwordHash && u.Role_id == 1);
             if (user == null)
             {
                 return Json(new
@@ -115,7 +116,7 @@ namespace DBKP.admin
             
             SqlParameter userIdParameter = new SqlParameter("@UserId", userId);
             SqlParameter chipsParameter = new SqlParameter("@ChipsAmount", chips);
-            db.Database.ExecuteSqlRaw("addChipsToUser @UserId, @ChipsAmount", 
+            await db.Database.ExecuteSqlRawAsync("addChipsToUser @UserId, @ChipsAmount", 
                 userIdParameter, chipsParameter);
              return Json(new
             {
@@ -123,9 +124,9 @@ namespace DBKP.admin
             });
         }
         
-        public JsonResult isAdmin(string login, string passwordHash)
+        public async Task<JsonResult> isAdmin(string login, string passwordHash)
         {
-            UserModel user = db.Users.FirstOrDefault(u => u.Login == login && u.Password == passwordHash && u.Role_id == 1);
+            UserModel user = await db.Users.FirstOrDefaultAsync(u => u.Login == login && u.Password == passwordHash && u.Role_id == 1);
 
             if (user == null)
             {
