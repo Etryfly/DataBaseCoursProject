@@ -22,15 +22,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="11ea4707-34c2-428f-8c6b-385c58142bd3" name="Default Changelist" comment="Small fix">
+    <list default="true" id="11ea4707-34c2-428f-8c6b-385c58142bd3" name="Default Changelist" comment="Fix">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DBKP/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DBKP/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBKP/Controllers/AuthenticationController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/Controllers/AuthenticationController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DBKP/Controllers/BlackJackController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/Controllers/BlackJackController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBKP/Controllers/PaymentsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/Controllers/PaymentsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBKP/DBLog.txt" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/DBLog.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBKP/Views/Authentication/Loginin.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/Views/Authentication/Loginin.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBKP/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/Views/Home/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBKP/wwwroot/css/site.css" beforeDir="false" afterPath="$PROJECT_DIR$/DBKP/wwwroot/css/site.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,9 +71,9 @@
         <option value="$PROJECT_DIR$/DBKP/wwwroot/css/site.css" />
         <option value="$PROJECT_DIR$/DBKP/Controllers/PaymentsController.cs" />
         <option value="$PROJECT_DIR$/DBKP/Controllers/AuthenticationController.cs" />
-        <option value="$PROJECT_DIR$/DBKP/Controllers/BlackJackController.cs" />
         <option value="$PROJECT_DIR$/DBKP/Views/Home/Index.cshtml" />
         <option value="$PROJECT_DIR$/DBKP/Views/Authentication/Loginin.cshtml" />
+        <option value="$PROJECT_DIR$/DBKP/Controllers/BlackJackController.cs" />
       </list>
     </option>
   </component>
@@ -190,6 +184,8 @@
       <workItem from="1603566955258" duration="979000" />
       <workItem from="1604941664946" duration="40827000" />
       <workItem from="1605544895859" duration="2425000" />
+      <workItem from="1607110222998" duration="1362000" />
+      <workItem from="1607690069339" duration="1342000" />
     </task>
     <task id="LOCAL-00001" summary="Bet bug fix">
       <created>1603011969086</created>
@@ -240,7 +236,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605198102608</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Fix">
+      <created>1607110447973</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1607110447973</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -268,13 +271,18 @@
     <MESSAGE value="admin features" />
     <MESSAGE value="Achievements removed" />
     <MESSAGE value="Small fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Small fix" />
+    <MESSAGE value="Fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix" />
   </component>
   <component name="WindowStateProjectService">
     <state x="141" y="27" width="1084" height="741" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605544995383">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="141" y="27" width="1084" height="741" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1366.741@0.27.1366.741" timestamp="1605544995383" />
+    <state x="100" y="127" width="1166" height="541" key="DiffContextDialog" timestamp="1607110788243">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="100" y="127" width="1166" height="541" key="DiffContextDialog/0.27.1366.741/1366.0.1280.1024@0.27.1366.741" timestamp="1607110788243" />
     <state x="466" y="155" width="424" height="491" key="FileChooserDialogImpl" timestamp="1603011447625">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
@@ -363,9 +371,10 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="172" y="31" width="1022" height="737" key="SettingsEditor/0.27.1366.741@0.27.1366.741" timestamp="1602860714901" />
-    <state x="278" y="133" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1605198104753">
+    <state x="278" y="133" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1607110453363">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
+    <state x="278" y="133" key="Vcs.Push.Dialog.v2/0.27.1366.741/1366.0.1280.1024@0.27.1366.741" timestamp="1607110453363" />
     <state x="278" y="133" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.1366.741@0.27.1366.741" timestamp="1605198104753" />
   </component>
 </project>

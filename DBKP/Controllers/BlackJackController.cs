@@ -3,11 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using DBKP.Models;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.Extensions.Logging;
-using Newtonsoft.Json;
 
 namespace DBKP.Controllers
 {
@@ -33,13 +30,12 @@ namespace DBKP.Controllers
                 return RedirectToAction("Loginin", "Authentication");
             }
 
-            // db.GetService<ILoggerFactory>().AddProvider(new DBLoggerProvider());
+          
             UserModel userModel = db.Users.FirstOrDefault(u => u.Login == User.Identity.Name);
             MoneyModel moneyModel = db.Money.FirstOrDefault(u => u.Id == userModel.Id);
 
             GameStatsModel gameStatsModel = db.GameStats.FirstOrDefault(u => u.Id == userModel.Id);
-            _logger.LogInformation("BlackJack: real userId: " + userModel.Id + " id from money: "
-                                   + moneyModel.Id + " money: " + moneyModel.Chips);
+            
             userModel.Money = moneyModel;
             userModel.GameStats = gameStatsModel;
 
@@ -117,6 +113,19 @@ namespace DBKP.Controllers
             // db.Hand.Add(hand);
             db.SaveChanges();
         }
+        
+        private void ClearHandCardsByHand(HandModel handModel)
+        {
+            foreach (var handCard in db.HandCard.Where(h => h.HandId == handModel.hand_id))
+            {
+                db.HandCard.Remove(handCard);
+            }
+
+            
+            db.SaveChanges();
+            db.Hand.Remove(handModel);
+            db.SaveChanges();
+        }
 
         #endregion
 
@@ -156,18 +165,7 @@ namespace DBKP.Controllers
             error = 4
         }
 
-        private void ClearHandCardsByHand(HandModel handModel)
-        {
-            foreach (var handCard in db.HandCard.Where(h => h.HandId == handModel.hand_id))
-            {
-                db.HandCard.Remove(handCard);
-            }
-
-            
-            db.SaveChanges();
-            db.Hand.Remove(handModel);
-            db.SaveChanges();
-        }
+        
 
         private void UserLoseIntoGameStatTable(int userId, decimal bet)
         {
