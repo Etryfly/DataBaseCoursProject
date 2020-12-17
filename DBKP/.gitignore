@@ -7,5 +7,5 @@
 *.iml
 out
 gen
-appsettings.*
+appsettings.Development.json
 appsettings.json
