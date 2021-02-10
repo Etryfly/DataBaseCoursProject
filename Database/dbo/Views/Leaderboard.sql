@@ -1,0 +1,1 @@
+﻿create view [Leaderboard] as Select Login, Chips from Users u join Money m on u.Id = m.Id

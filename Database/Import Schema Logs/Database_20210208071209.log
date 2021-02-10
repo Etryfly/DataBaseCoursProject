@@ -1,0 +1,83 @@
+08.02.2021 22:12:09	This log contains information about the import schema operation into project 'Database' on computer 'DESKTOP-HL7GU9H' by user 'Etryfly'.
+08.02.2021 22:12:09	Import of database schema has started.
+08.02.2021 22:12:20	Gathering logins
+08.02.2021 22:14:45	Gathering database credentials
+08.02.2021 22:14:45	Gathering database options
+08.02.2021 22:14:45	Gathering generic database scoped configuration option
+08.02.2021 22:14:45	Gathering users
+08.02.2021 22:14:45	Gathering roles
+08.02.2021 22:14:45	Gathering application roles
+08.02.2021 22:14:45	Gathering role memberships
+08.02.2021 22:14:45	Gathering filegroups
+08.02.2021 22:14:45	Gathering full-text catalogs
+08.02.2021 22:14:45	Gathering assemblies
+08.02.2021 22:14:45	Gathering certificates
+08.02.2021 22:14:45	Gathering symmetric keys
+08.02.2021 22:14:45	Gathering encrypted symmetric keys
+08.02.2021 22:14:45	Gathering schemas
+08.02.2021 22:14:45	Gathering XML schema collections
+08.02.2021 22:14:45	Gathering user-defined data types
+08.02.2021 22:14:45	Gathering user-defined types
+08.02.2021 22:14:45	Gathering table types
+08.02.2021 22:14:45	Gathering unique keys for table types
+08.02.2021 22:14:45	Gathering primary keys for table types
+08.02.2021 22:14:45	Gathering indexes for table types
+08.02.2021 22:14:52	Gathering check constraints for table types
+08.02.2021 22:14:52	Gathering default constraints for table types
+08.02.2021 22:14:52	Gathering partition functions
+08.02.2021 22:14:52	Gathering partition schemes
+08.02.2021 22:14:52	Gathering functions
+08.02.2021 22:14:52	Gathering encrypted functions
+08.02.2021 22:14:52	Gathering aggregates
+08.02.2021 22:14:52	Gathering procedures
+08.02.2021 22:14:53	Gathering encrypted procedures
+08.02.2021 22:14:53	Gathering tables
+08.02.2021 22:14:53	Gathering primary keys
+08.02.2021 22:14:53	Gathering unique constraints
+08.02.2021 22:14:53	Gathering foreign keys
+08.02.2021 22:14:54	Gathering default constraints
+08.02.2021 22:14:54	Gathering check constraints
+08.02.2021 22:14:54	Gathering views
+08.02.2021 22:14:54	Gathering encrypted views
+08.02.2021 22:14:54	Gathering indexes
+08.02.2021 22:14:54	Gathering statistics
+08.02.2021 22:14:54	Gathering full-text index stoplists
+08.02.2021 22:14:54	Gathering search property lists
+08.02.2021 22:14:54	Gathering search properties
+08.02.2021 22:14:54	Gathering full-text indexes
+08.02.2021 22:14:54	Gathering column store indexes
+08.02.2021 22:14:54	Gathering spatial indexes
+08.02.2021 22:14:54	Gathering XML indexes
+08.02.2021 22:14:54	Gathering Selective XML indexes
+08.02.2021 22:14:54	Gathering encrypted triggers
+08.02.2021 22:14:54	Gathering triggers
+08.02.2021 22:14:54	Gathering encrypted and clr ddl triggers
+08.02.2021 22:14:54	Gathering ddl triggers
+08.02.2021 22:14:54	Creating edge constraints
+08.02.2021 22:14:54	Gathering synonyms
+08.02.2021 22:14:54	Gathering defaults
+08.02.2021 22:14:54	Gathering data constraint uddt bindings
+08.02.2021 22:14:54	Gathering rules
+08.02.2021 22:14:54	Gathering data constraint uddt bindings
+08.02.2021 22:14:54	Gathering message types
+08.02.2021 22:14:54	Gathering queues
+08.02.2021 22:14:54	Gathering contracts
+08.02.2021 22:14:54	Gathering services
+08.02.2021 22:14:55	Gathering event notifications
+08.02.2021 22:14:55	Gathering remote service bindings
+08.02.2021 22:14:55	Gathering broker priorities
+08.02.2021 22:14:55	Gathering signatures
+08.02.2021 22:14:55	Gathering data compression options
+08.02.2021 22:14:55	Gathering sequence types
+08.02.2021 22:14:55	Gathering security policies
+08.02.2021 22:14:55	Gather column encryption keys
+08.02.2021 22:14:55	Gathering column master keys
+08.02.2021 22:14:55	Gathering external data sources
+08.02.2021 22:14:55	Gathering external tables
+08.02.2021 22:14:55	Gathering extended properties
+08.02.2021 22:14:59	Gathering logins
+08.02.2021 22:15:01	Scanning project for duplicate elements
+08.02.2021 22:15:02	Finished duplicate element processing
+08.02.2021 22:15:02	Finished importing database.
+08.02.2021 22:15:02	A summary of the import was saved to the following location: C:\Users\Etryfly\source\repos\Etryfly\DataBaseCoursProject\Database\Import Schema Logs\Database_20210208071209.log
+08.02.2021 22:15:02	Click Finish to continue...

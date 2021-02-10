@@ -1,0 +1,10 @@
+09.02.2021 11:20:10	This log contains information about the import schema operation into project 'Database' on computer 'DESKTOP-HL7GU9H' by user 'Etryfly'.
+09.02.2021 11:20:10	Deserializing model
+09.02.2021 11:20:10	Resolving model
+09.02.2021 11:20:10	Visiting imported model for types
+09.02.2021 11:20:11	Scanning project for duplicate elements
+09.02.2021 11:20:11	Finished duplicate element processing
+09.02.2021 11:20:11	Processing extra files
+09.02.2021 11:20:11	Finished importing Data-tier Application file.
+09.02.2021 11:20:11	A summary of the import was saved to the following location: C:\Users\Etryfly\source\repos\Etryfly\DataBaseCoursProject\Database\Import Schema Logs\Database_20210209082010.log
+09.02.2021 11:20:11	Click Finish to continue...
